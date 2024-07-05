@@ -1,0 +1,49 @@
+
+server:
+  port: 443
+  ssl:
+    key-store: j2vprojectkeystore.jks
+    key-store-password: LordhaveMercyImBoutToBust127590
+    keyStoreType: PKCS12
+    keyAlias: 1
+  error:
+    include-message: always
+    include-binding-errors: always
+config:
+  application:
+    jwtSecret: ======================BezKoder=Spring===========================
+    jwtExpirationMs: 86400000
+
+spring:
+
+  datasource:
+    password: 21387866
+    url: jdbc:postgresql://localhost:5432/postgres
+    username: postgres
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+        format_sql: true
+    show-sql: false
+
+  mail:
+    host: smtp.gmail.com
+    port: 587
+    username: zinxshosting@gmail.com
+    password: vocqmvfysvrjoivp
+
+    properties:
+      mail:
+        smtp:
+          ssl:
+            trust: "*"
+          auth: true
+          starttls:
+            enable: true
+          connectiontimeout: 5000
+          timeout: 3000
+          writetimeout: 5000
+

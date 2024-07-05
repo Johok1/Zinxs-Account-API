@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <title>Register - Zinxs Wiki</title>
+    <link href="css/styles.css" rel="stylesheet" />
+    <link rel="icon" type="image/x-icon" href="assets/img/Zinks_png.png" />
+
+    <script data-search-pseudo-elements defer src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/js/all.min.js" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/feather-icons/4.29.0/feather.min.js" crossorigin="anonymous"></script>
+</head>
+<body class="nav-fixed sidenav-toggled" style="user-select: none">
+<script src="https://accounts.google.com/gsi/client" async defer></script>
+    <nav class="topnav navbar navbar-expand shadow justify-content-between justify-content-sm-start" id="sidenavAccordion">
+        <!-- Sidenav Toggle Button-->
+        <button class="btn btn-icon btn-transparent-dark order-0 order-lg-0 me-0 ms-lg-2 me-lg-0" id="sidebarToggle"><img style="width: 100%; height: 100%;" src="assets/img/Zinks_png.png"></button>
+        <!-- Navbar Brand-->
+        <!-- * * Tip * * You can use text or an image for your navbar brand.-->
+        <!-- * * * * * * When using an image, we recommend the SVG format.-->
+        <!-- * * * * * * Dimensions: Maximum height: 32px, maximum width: 240px-->
+
+        <a class="navbar-brand pe-3 ps-4 ps-lg-2" href="https://www.zinxswiki.com">Zinxs Wiki</a>
+        <!-- Navbar Search Input-->
+        <!-- Navbar Items-->
+        <ul class="navbar-nav align-items-center ms-auto">
+            <!-- Documentation Dropdown-->
+            <li class="nav-item dropdown no-caret d-none d-md-block me-3">
+
+                <div class="dropdown-menu dropdown-menu-end py-0 me-sm-n15 me-lg-0 o-hidden animated--fade-in-up" aria-labelledby="navbarDropdownDocs">
+                    <a class="dropdown-item py-3" href="https://docs.startbootstrap.com/sb-admin-pro" target="_blank">
+                        <div class="icon-stack bg-primary-soft text-primary me-4"><i data-feather="book"></i></div>
+                        <div>
+                            <div class="small text-gray-500">Documentation</div>
+                            Usage instructions and reference
+                        </div>
+                    </a>
+                    <div class="dropdown-divider m-0"></div>
+                    <a class="dropdown-item py-3" href="https://docs.startbootstrap.com/sb-admin-pro/components" target="_blank">
+                        <div class="icon-stack bg-primary-soft text-primary me-4"><i data-feather="code"></i></div>
+                        <div>
+                            <div class="small text-gray-500">Components</div>
+                            Code snippets and reference
+                        </div>
+                    </a>
+                    <div class="dropdown-divider m-0"></div>
+                    <a class="dropdown-item py-3" href="https://docs.startbootstrap.com/sb-admin-pro/changelog" target="_blank">
+                        <div class="icon-stack bg-primary-soft text-primary me-4"><i data-feather="file-text"></i></div>
+                        <div>
+                            <div class="small text-gray-500">Changelog</div>
+                            Updates and changes
+                        </div>
+                    </a>
+                </div>
+            </li>
+
+
+        </ul>
+    </nav>
+    <div id="layoutSidenav">
+        <div id="layoutSidenav_nav">
+            <nav class="sidenav shadow-right">
+                <div class="sidenav-menu">
+                    <div class="nav accordion" id="accordionSidenav">
+                        <br><br><br><br><br><br><br><br><br><br>
+                        <br><br><br><br><br><br><br><br><br><br>
+                        <br><br><br><br><br><br><br><br><br><br>
+
+                    </div>
+                    <!-- Sidenav Footer-->
+                    <div class="sidenav-footer">
+                        <div class="sidenav-footer-content">
+                            <div class="sidenav-footer-subtitle">Logged out</div>
+                            <div class="sidenav-footer-title"></div>
+                        </div>
+                    </div>
+            </nav>
+        </div>
+        <div id="layoutSidenav_content">
+            <main>
+                <div style="margin: 5%; user-select: none">
+
+                    <div class="container-xl px-4">
+                        <div class="row justify-content-center">
+                            <div class="col-xl-8 col-lg-9">
+                                <!-- Social registration form-->
+                                <div class="card my-5">
+                                    <div class="card-body p-5 text-center">
+                                        <div class="h3 fw-light mb-3">Create an Account</div>
+                                        <div class="small text-muted mb-2">Sign in using...</div>
+                                        <div id="errorDiv" class="small text-muted mb-2 visually-hidden" style="color: red">Passwords don't match!</div>
+                                        <!-- Social registration links-->
+                                        <a class="btn btn-icon btn-facebook mx-1" href="#!"><i class="fab fa-facebook-f fa-fw fa-sm"></i></a>
+                                        <a class="btn btn-icon btn-github mx-1" href="#!"><i class="fab fa-github fa-fw fa-sm"></i></a>
+                                        <a class="btn btn-icon btn-google mx-1" href="#!"><i class="fab fa-google fa-fw fa-sm"></i></a>
+                                        <a class="btn btn-icon btn-twitter mx-1" href="#!"><i class="fab fa-twitter fa-fw fa-sm text-white"></i></a>
+                                    </div>
+                                    <hr class="my-0" />
+                                    <div class="card-body p-5">
+                                        <div class="text-center small text-muted mb-4">...or enter your information below.</div>
+                                        <!-- Login form-->
+                                        <form>
+                                            <!-- Form Row-->
+                                            <div class="row gx-3">
+                                                <div class="col-md-6">
+                                                    <!-- Form Group (first name)-->
+                                                    <div class="mb-3">
+                                                        <label class="text-gray-600 small" for="firstNameExample">Username</label>
+                                                        <input id="usernameInput" class="form-control form-control-solid" type="text" placeholder="" />
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                            <!-- Form Group (email address)-->
+                                            <div class="mb-3">
+                                                <label class="text-gray-600 small" for="emailExample">Email address</label>
+                                                <input id="emailInput" class="form-control form-control-solid" type="text" placeholder="" "   />
+                                            </div>
+                                            <!-- Form Row-->
+                                            <div class="row gx-3">
+                                                <div class="col-md-6">
+                                                    <!-- Form Group (choose password)-->
+                                                    <div class="mb-3">
+                                                        <label class="text-gray-600 small" for="passwordExample">Password</label>
+                                                        <input id="passwordInput" class="form-control form-control-solid" type="password" placeholder="" />
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <!-- Form Group (confirm password)-->
+                                                    <div class="mb-3">
+                                                        <label class="text-gray-600 small" for="confirmPasswordExample">Confirm Password</label>
+                                                        <input id="confirmPasswordInput" class="form-control form-control-solid" type="password" placeholder="" aria-label="Confirm Password" aria-describedby="confirmPasswordExample" />
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- Form Group (form submission)-->
+                                            <div class="d-flex align-items-center justify-content-between">
+                                                <div class="form-check">
+                                                    <input class="form-check-input" id="checkTerms" type="checkbox" value="" />
+                                                    <label class="form-check-label" for="checkTerms">
+                                                        I accept the
+                                                        <a href="#!">terms &amp; conditions</a>
+                                                        .
+                                                    </label>
+                                                </div>
+                                                <a id="createAccountBtn" class="btn btn-primary" href="#!">Create Account</a>
+                                            </div>
+                                        </form>
+                                    </div>
+                                    <hr class="my-0" />
+                                    <div class="card-body px-5 py-4">
+                                        <div class="small text-center">
+                                            Have an account?
+                                            <a href="https://www.zinxswiki.com/login">Sign in!</a>
+                                            <div id="g_id_onload"
+                                                 data-client_id="168876054670-t977a0o6isruvtsk2ieumtak6qrio1pa.apps.googleusercontent.com"
+                                                 data-callback="handleCredentialResponse"
+                                                 data-context="signin"
+                                                 data-ux_mode="popup"
+                                                 data-login_uri=""
+                                                 data-auto_prompt="false">
+
+                                            </div>
+
+                                            <div class="g_id_signin"
+                                                 data-type="standard"
+                                                 data-shape="rectangular"
+                                                 data-theme="outline"
+                                                 data-text="register_with"
+                                                 data-size="large"
+                                                 data-logo_alignment="left">
+                                            </div>
+                                        </div>
+
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+
+
+            </main>
+            <footer class="footer-admin mt-auto">
+                <div class="container-xl px-4">
+                    <div class="row">
+                        <div class="col-md-6 small">Copyright &copy; Zinxs Wiki 2024</div>
+                        <div class="col-md-6 text-md-end small">
+                            <a href="#!">Privacy Policy</a>
+                            &middot;
+                            <a href="#!">Terms &amp; Conditions</a>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+    <script src="js/scripts.js"></script>
+    <script src="js/webmodules/register/modules/register.js"></script>
+</body>
+</html>

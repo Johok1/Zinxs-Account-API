@@ -1,0 +1,17 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\js",
+    "\\js\\webmodules",
+    "\\js\\webmodules\\pageeditor",
+    "\\js\\webmodules\\pageeditor\\modules",
+    "\\js\\webmodules\\pageeditor\\modules\\functions",
+    "\\js\\webmodules\\pageeditor\\modules\\functions\\function",
+    "\\js\\webmodules\\pageeditor\\modules\\functions\\function\\implements",
+    "\\js\\webmodules\\pageeditor\\modules\\utilities",
+    "\\js\\webmodules\\pageeditor\\modules\\utilities\\utility",
+    "\\js\\webmodules\\pageeditor\\modules\\utilities\\utility\\implements"
+  ],
+  "SelectedNode": "\\js\\webmodules\\pageeditor\\modules\\editor\\utility_modules\\implements\\utility_creation_module.js",
+  "PreviewInSolutionExplorer": false
+}

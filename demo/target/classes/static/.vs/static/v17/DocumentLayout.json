@@ -1,0 +1,479 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "E:\\Program Files\\zinxs\\zikiSystem\\zikiE\\ZikiE\\wiki-main\\src\\main\\resources\\static\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|E:\\Program Files\\zinxs\\zikiSystem\\zikiE\\ZikiE\\wiki-main\\src\\main\\resources\\static\\js\\webmodules\\pageeditor\\modules\\editor\\utility_modules\\implements\\utility_creation_module.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:js\\webmodules\\pageeditor\\modules\\editor\\utility_modules\\implements\\utility_creation_module.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|E:\\Program Files\\zinxs\\zikiSystem\\zikiE\\ZikiE\\wiki-main\\src\\main\\resources\\static\\js\\webmodules\\pageeditor\\modules\\functions\\function\\function.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:js\\webmodules\\pageeditor\\modules\\functions\\function\\function.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|E:\\Program Files\\zinxs\\zikiSystem\\zikiE\\ZikiE\\wiki-main\\src\\main\\resources\\static\\js\\webmodules\\pageeditor\\modules\\functions\\function\\implements\\summernote_function.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:js\\webmodules\\pageeditor\\modules\\functions\\function\\implements\\summernote_function.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|E:\\Program Files\\zinxs\\zikiSystem\\zikiE\\ZikiE\\wiki-main\\src\\main\\resources\\static\\js\\webmodules\\pageeditor\\modules\\functions\\function\\implements\\horizontal_resize_function.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:js\\webmodules\\pageeditor\\modules\\functions\\function\\implements\\horizontal_resize_function.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|E:\\Program Files\\zinxs\\zikiSystem\\zikiE\\ZikiE\\wiki-main\\src\\main\\resources\\static\\js\\webmodules\\pageeditor\\modules\\functions\\function\\implements\\box_resize_function.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:js\\webmodules\\pageeditor\\modules\\functions\\function\\implements\\box_resize_function.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|E:\\Program Files\\zinxs\\zikiSystem\\zikiE\\ZikiE\\wiki-main\\src\\main\\resources\\static\\js\\webmodules\\pageeditor\\modules\\toolbar\\implements\\image_toolbar.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:js\\webmodules\\pageeditor\\modules\\toolbar\\implements\\image_toolbar.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|E:\\Program Files\\zinxs\\zikiSystem\\zikiE\\ZikiE\\wiki-main\\src\\main\\resources\\static\\js\\webmodules\\pageeditor\\modules\\toolbar\\implements\\text_toolbar.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:js\\webmodules\\pageeditor\\modules\\toolbar\\implements\\text_toolbar.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|E:\\Program Files\\zinxs\\zikiSystem\\zikiE\\ZikiE\\wiki-main\\src\\main\\resources\\static\\js\\webmodules\\pageeditor\\modules\\utilities\\utility\\implements\\image_utility.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:js\\webmodules\\pageeditor\\modules\\utilities\\utility\\implements\\image_utility.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|E:\\Program Files\\zinxs\\zikiSystem\\zikiE\\ZikiE\\wiki-main\\src\\main\\resources\\static\\js\\webmodules\\pageeditor\\modules\\utilities\\utility\\implements\\text_utility_v2.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:js\\webmodules\\pageeditor\\modules\\utilities\\utility\\implements\\text_utility_v2.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|E:\\Program Files\\zinxs\\zikiSystem\\zikiE\\ZikiE\\wiki-main\\src\\main\\resources\\static\\js\\webmodules\\pageeditor\\modules\\utilities\\utility\\utility.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:js\\webmodules\\pageeditor\\modules\\utilities\\utility\\utility.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|E:\\Program Files\\zinxs\\zikiSystem\\zikiE\\ZikiE\\wiki-main\\src\\main\\resources\\static\\js\\webmodules\\pageeditor\\modules\\page_editor_view.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:js\\webmodules\\pageeditor\\modules\\page_editor_view.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|E:\\Program Files\\zinxs\\zikiSystem\\zikiE\\ZikiE\\wiki-main\\src\\main\\resources\\static\\js\\webmodules\\pageeditor\\modules\\utilities\\utility_factory.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:js\\webmodules\\pageeditor\\modules\\utilities\\utility_factory.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|E:\\Program Files\\zinxs\\zikiSystem\\zikiE\\ZikiE\\wiki-main\\src\\main\\resources\\static\\js\\webmodules\\pageeditor\\modules\\utilities\\utility_function_interface.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:js\\webmodules\\pageeditor\\modules\\utilities\\utility_function_interface.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|E:\\Program Files\\zinxs\\zikiSystem\\zikiE\\ZikiE\\wiki-main\\src\\main\\resources\\static\\js\\webmodules\\pageeditor\\modules\\toolbar\\toolbar_interface.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:js\\webmodules\\pageeditor\\modules\\toolbar\\toolbar_interface.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|E:\\Program Files\\zinxs\\zikiSystem\\zikiE\\ZikiE\\wiki-main\\src\\main\\resources\\static\\js\\webmodules\\pageeditor\\modules\\toolbar\\implements\\toolbar.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:js\\webmodules\\pageeditor\\modules\\toolbar\\implements\\toolbar.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|E:\\Program Files\\zinxs\\zikiSystem\\zikiE\\ZikiE\\wiki-main\\src\\main\\resources\\static\\js\\webmodules\\pageeditor\\modules\\submit\\page_submit_timer.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:js\\webmodules\\pageeditor\\modules\\submit\\page_submit_timer.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|E:\\Program Files\\zinxs\\zikiSystem\\zikiE\\ZikiE\\wiki-main\\src\\main\\resources\\static\\js\\webmodules\\pageeditor\\modules\\functions\\function\\implements\\image_backend_function.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:js\\webmodules\\pageeditor\\modules\\functions\\function\\implements\\image_backend_function.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|E:\\Program Files\\zinxs\\zikiSystem\\zikiE\\ZikiE\\wiki-main\\src\\main\\resources\\static\\js\\webmodules\\pageeditor\\modules\\functions\\facades\\text_function_facade.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:js\\webmodules\\pageeditor\\modules\\functions\\facades\\text_function_facade.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|E:\\Program Files\\zinxs\\zikiSystem\\zikiE\\ZikiE\\wiki-main\\src\\main\\resources\\static\\js\\webmodules\\pageeditor\\modules\\functions\\facades\\image_function_facade.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:js\\webmodules\\pageeditor\\modules\\functions\\facades\\image_function_facade.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|E:\\Program Files\\zinxs\\zikiSystem\\zikiE\\ZikiE\\wiki-main\\src\\main\\resources\\static\\js\\webmodules\\pageeditor\\modules\\functions\\facades\\functions_facade.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:js\\webmodules\\pageeditor\\modules\\functions\\facades\\functions_facade.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|E:\\Program Files\\zinxs\\zikiSystem\\zikiE\\ZikiE\\wiki-main\\src\\main\\resources\\static\\js\\webmodules\\pageeditor\\modules\\editor\\utility_modules\\implements\\utility_translation_module.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:js\\webmodules\\pageeditor\\modules\\editor\\utility_modules\\implements\\utility_translation_module.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|E:\\Program Files\\zinxs\\zikiSystem\\zikiE\\ZikiE\\wiki-main\\src\\main\\resources\\static\\js\\webmodules\\pageeditor\\modules\\editor\\utility_modules\\implements\\utility_selection_module.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:js\\webmodules\\pageeditor\\modules\\editor\\utility_modules\\implements\\utility_selection_module.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|E:\\Program Files\\zinxs\\zikiSystem\\zikiE\\ZikiE\\wiki-main\\src\\main\\resources\\static\\js\\webmodules\\pageeditor\\modules\\editor\\utility_modules\\implements\\utility_layer_translation_module.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:js\\webmodules\\pageeditor\\modules\\editor\\utility_modules\\implements\\utility_layer_translation_module.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|E:\\Program Files\\zinxs\\zikiSystem\\zikiE\\ZikiE\\wiki-main\\src\\main\\resources\\static\\js\\webmodules\\pageeditor\\modules\\editor\\utility_modules\\implements\\utility_layer_handler_module.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:js\\webmodules\\pageeditor\\modules\\editor\\utility_modules\\implements\\utility_layer_handler_module.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|E:\\Program Files\\zinxs\\zikiSystem\\zikiE\\ZikiE\\wiki-main\\src\\main\\resources\\static\\js\\webmodules\\pageeditor\\modules\\editor\\utility_modules\\implements\\layer_manager_module.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:js\\webmodules\\pageeditor\\modules\\editor\\utility_modules\\implements\\layer_manager_module.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|E:\\Program Files\\zinxs\\zikiSystem\\zikiE\\ZikiE\\wiki-main\\src\\main\\resources\\static\\js\\webmodules\\pageeditor\\modules\\editor\\utility_modules\\implements\\utility_handler_module.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:js\\webmodules\\pageeditor\\modules\\editor\\utility_modules\\implements\\utility_handler_module.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|E:\\Program Files\\zinxs\\zikiSystem\\zikiE\\ZikiE\\wiki-main\\src\\main\\resources\\static\\js\\webmodules\\pageeditor\\modules\\editor\\utility_helper.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:js\\webmodules\\pageeditor\\modules\\editor\\utility_helper.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 26,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "toolbar_interface.js",
+              "DocumentMoniker": "E:\\Program Files\\zinxs\\zikiSystem\\zikiE\\ZikiE\\wiki-main\\src\\main\\resources\\static\\js\\webmodules\\pageeditor\\modules\\toolbar\\toolbar_interface.js",
+              "RelativeDocumentMoniker": "js\\webmodules\\pageeditor\\modules\\toolbar\\toolbar_interface.js",
+              "ToolTip": "E:\\Program Files\\zinxs\\zikiSystem\\zikiE\\ZikiE\\wiki-main\\src\\main\\resources\\static\\js\\webmodules\\pageeditor\\modules\\toolbar\\toolbar_interface.js",
+              "RelativeToolTip": "js\\webmodules\\pageeditor\\modules\\toolbar\\toolbar_interface.js",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2024-07-01T18:16:07.447Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "image_toolbar.js",
+              "DocumentMoniker": "E:\\Program Files\\zinxs\\zikiSystem\\zikiE\\ZikiE\\wiki-main\\src\\main\\resources\\static\\js\\webmodules\\pageeditor\\modules\\toolbar\\implements\\image_toolbar.js",
+              "RelativeDocumentMoniker": "js\\webmodules\\pageeditor\\modules\\toolbar\\implements\\image_toolbar.js",
+              "ToolTip": "E:\\Program Files\\zinxs\\zikiSystem\\zikiE\\ZikiE\\wiki-main\\src\\main\\resources\\static\\js\\webmodules\\pageeditor\\modules\\toolbar\\implements\\image_toolbar.js",
+              "RelativeToolTip": "js\\webmodules\\pageeditor\\modules\\toolbar\\implements\\image_toolbar.js",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAC4AAAAsAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2024-07-01T18:16:02.24Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "page_submit_timer.js",
+              "DocumentMoniker": "E:\\Program Files\\zinxs\\zikiSystem\\zikiE\\ZikiE\\wiki-main\\src\\main\\resources\\static\\js\\webmodules\\pageeditor\\modules\\submit\\page_submit_timer.js",
+              "RelativeDocumentMoniker": "js\\webmodules\\pageeditor\\modules\\submit\\page_submit_timer.js",
+              "ToolTip": "E:\\Program Files\\zinxs\\zikiSystem\\zikiE\\ZikiE\\wiki-main\\src\\main\\resources\\static\\js\\webmodules\\pageeditor\\modules\\submit\\page_submit_timer.js",
+              "RelativeToolTip": "js\\webmodules\\pageeditor\\modules\\submit\\page_submit_timer.js",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2024-07-01T18:16:00.363Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "text_function_facade.js",
+              "DocumentMoniker": "E:\\Program Files\\zinxs\\zikiSystem\\zikiE\\ZikiE\\wiki-main\\src\\main\\resources\\static\\js\\webmodules\\pageeditor\\modules\\functions\\facades\\text_function_facade.js",
+              "RelativeDocumentMoniker": "js\\webmodules\\pageeditor\\modules\\functions\\facades\\text_function_facade.js",
+              "ToolTip": "E:\\Program Files\\zinxs\\zikiSystem\\zikiE\\ZikiE\\wiki-main\\src\\main\\resources\\static\\js\\webmodules\\pageeditor\\modules\\functions\\facades\\text_function_facade.js",
+              "RelativeToolTip": "js\\webmodules\\pageeditor\\modules\\functions\\facades\\text_function_facade.js",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2024-07-01T18:15:46.048Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "image_function_facade.js",
+              "DocumentMoniker": "E:\\Program Files\\zinxs\\zikiSystem\\zikiE\\ZikiE\\wiki-main\\src\\main\\resources\\static\\js\\webmodules\\pageeditor\\modules\\functions\\facades\\image_function_facade.js",
+              "RelativeDocumentMoniker": "js\\webmodules\\pageeditor\\modules\\functions\\facades\\image_function_facade.js",
+              "ToolTip": "E:\\Program Files\\zinxs\\zikiSystem\\zikiE\\ZikiE\\wiki-main\\src\\main\\resources\\static\\js\\webmodules\\pageeditor\\modules\\functions\\facades\\image_function_facade.js",
+              "RelativeToolTip": "js\\webmodules\\pageeditor\\modules\\functions\\facades\\image_function_facade.js",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2024-07-01T18:15:45.377Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "functions_facade.js",
+              "DocumentMoniker": "E:\\Program Files\\zinxs\\zikiSystem\\zikiE\\ZikiE\\wiki-main\\src\\main\\resources\\static\\js\\webmodules\\pageeditor\\modules\\functions\\facades\\functions_facade.js",
+              "RelativeDocumentMoniker": "js\\webmodules\\pageeditor\\modules\\functions\\facades\\functions_facade.js",
+              "ToolTip": "E:\\Program Files\\zinxs\\zikiSystem\\zikiE\\ZikiE\\wiki-main\\src\\main\\resources\\static\\js\\webmodules\\pageeditor\\modules\\functions\\facades\\functions_facade.js",
+              "RelativeToolTip": "js\\webmodules\\pageeditor\\modules\\functions\\facades\\functions_facade.js",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2024-07-01T18:15:44.591Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "utility_translation_module.js",
+              "DocumentMoniker": "E:\\Program Files\\zinxs\\zikiSystem\\zikiE\\ZikiE\\wiki-main\\src\\main\\resources\\static\\js\\webmodules\\pageeditor\\modules\\editor\\utility_modules\\implements\\utility_translation_module.js",
+              "RelativeDocumentMoniker": "js\\webmodules\\pageeditor\\modules\\editor\\utility_modules\\implements\\utility_translation_module.js",
+              "ToolTip": "E:\\Program Files\\zinxs\\zikiSystem\\zikiE\\ZikiE\\wiki-main\\src\\main\\resources\\static\\js\\webmodules\\pageeditor\\modules\\editor\\utility_modules\\implements\\utility_translation_module.js",
+              "RelativeToolTip": "js\\webmodules\\pageeditor\\modules\\editor\\utility_modules\\implements\\utility_translation_module.js",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2024-07-01T18:15:40.235Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "utility_selection_module.js",
+              "DocumentMoniker": "E:\\Program Files\\zinxs\\zikiSystem\\zikiE\\ZikiE\\wiki-main\\src\\main\\resources\\static\\js\\webmodules\\pageeditor\\modules\\editor\\utility_modules\\implements\\utility_selection_module.js",
+              "RelativeDocumentMoniker": "js\\webmodules\\pageeditor\\modules\\editor\\utility_modules\\implements\\utility_selection_module.js",
+              "ToolTip": "E:\\Program Files\\zinxs\\zikiSystem\\zikiE\\ZikiE\\wiki-main\\src\\main\\resources\\static\\js\\webmodules\\pageeditor\\modules\\editor\\utility_modules\\implements\\utility_selection_module.js",
+              "RelativeToolTip": "js\\webmodules\\pageeditor\\modules\\editor\\utility_modules\\implements\\utility_selection_module.js",
+              "ViewState": "AQIAABYAAAAAAAAAAAAQwAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2024-07-01T18:15:37.865Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "utility_layer_translation_module.js",
+              "DocumentMoniker": "E:\\Program Files\\zinxs\\zikiSystem\\zikiE\\ZikiE\\wiki-main\\src\\main\\resources\\static\\js\\webmodules\\pageeditor\\modules\\editor\\utility_modules\\implements\\utility_layer_translation_module.js",
+              "RelativeDocumentMoniker": "js\\webmodules\\pageeditor\\modules\\editor\\utility_modules\\implements\\utility_layer_translation_module.js",
+              "ToolTip": "E:\\Program Files\\zinxs\\zikiSystem\\zikiE\\ZikiE\\wiki-main\\src\\main\\resources\\static\\js\\webmodules\\pageeditor\\modules\\editor\\utility_modules\\implements\\utility_layer_translation_module.js",
+              "RelativeToolTip": "js\\webmodules\\pageeditor\\modules\\editor\\utility_modules\\implements\\utility_layer_translation_module.js",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2024-07-01T18:15:36.134Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "utility_layer_handler_module.js",
+              "DocumentMoniker": "E:\\Program Files\\zinxs\\zikiSystem\\zikiE\\ZikiE\\wiki-main\\src\\main\\resources\\static\\js\\webmodules\\pageeditor\\modules\\editor\\utility_modules\\implements\\utility_layer_handler_module.js",
+              "RelativeDocumentMoniker": "js\\webmodules\\pageeditor\\modules\\editor\\utility_modules\\implements\\utility_layer_handler_module.js",
+              "ToolTip": "E:\\Program Files\\zinxs\\zikiSystem\\zikiE\\ZikiE\\wiki-main\\src\\main\\resources\\static\\js\\webmodules\\pageeditor\\modules\\editor\\utility_modules\\implements\\utility_layer_handler_module.js",
+              "RelativeToolTip": "js\\webmodules\\pageeditor\\modules\\editor\\utility_modules\\implements\\utility_layer_handler_module.js",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2024-07-01T18:15:34.915Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "layer_manager_module.js",
+              "DocumentMoniker": "E:\\Program Files\\zinxs\\zikiSystem\\zikiE\\ZikiE\\wiki-main\\src\\main\\resources\\static\\js\\webmodules\\pageeditor\\modules\\editor\\utility_modules\\implements\\layer_manager_module.js",
+              "RelativeDocumentMoniker": "js\\webmodules\\pageeditor\\modules\\editor\\utility_modules\\implements\\layer_manager_module.js",
+              "ToolTip": "E:\\Program Files\\zinxs\\zikiSystem\\zikiE\\ZikiE\\wiki-main\\src\\main\\resources\\static\\js\\webmodules\\pageeditor\\modules\\editor\\utility_modules\\implements\\layer_manager_module.js",
+              "RelativeToolTip": "js\\webmodules\\pageeditor\\modules\\editor\\utility_modules\\implements\\layer_manager_module.js",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAuwAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2024-07-01T18:15:33.384Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "utility_handler_module.js",
+              "DocumentMoniker": "E:\\Program Files\\zinxs\\zikiSystem\\zikiE\\ZikiE\\wiki-main\\src\\main\\resources\\static\\js\\webmodules\\pageeditor\\modules\\editor\\utility_modules\\implements\\utility_handler_module.js",
+              "RelativeDocumentMoniker": "js\\webmodules\\pageeditor\\modules\\editor\\utility_modules\\implements\\utility_handler_module.js",
+              "ToolTip": "E:\\Program Files\\zinxs\\zikiSystem\\zikiE\\ZikiE\\wiki-main\\src\\main\\resources\\static\\js\\webmodules\\pageeditor\\modules\\editor\\utility_modules\\implements\\utility_handler_module.js",
+              "RelativeToolTip": "js\\webmodules\\pageeditor\\modules\\editor\\utility_modules\\implements\\utility_handler_module.js",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2024-07-01T18:15:32.263Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "box_resize_function.js",
+              "DocumentMoniker": "E:\\Program Files\\zinxs\\zikiSystem\\zikiE\\ZikiE\\wiki-main\\src\\main\\resources\\static\\js\\webmodules\\pageeditor\\modules\\functions\\function\\implements\\box_resize_function.js",
+              "RelativeDocumentMoniker": "js\\webmodules\\pageeditor\\modules\\functions\\function\\implements\\box_resize_function.js",
+              "ToolTip": "E:\\Program Files\\zinxs\\zikiSystem\\zikiE\\ZikiE\\wiki-main\\src\\main\\resources\\static\\js\\webmodules\\pageeditor\\modules\\functions\\function\\implements\\box_resize_function.js",
+              "RelativeToolTip": "js\\webmodules\\pageeditor\\modules\\functions\\function\\implements\\box_resize_function.js",
+              "ViewState": "AQIAAB0AAAAAAAAAAAAAwCoAAABXAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2024-07-01T18:10:04.275Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "horizontal_resize_function.js",
+              "DocumentMoniker": "E:\\Program Files\\zinxs\\zikiSystem\\zikiE\\ZikiE\\wiki-main\\src\\main\\resources\\static\\js\\webmodules\\pageeditor\\modules\\functions\\function\\implements\\horizontal_resize_function.js",
+              "RelativeDocumentMoniker": "js\\webmodules\\pageeditor\\modules\\functions\\function\\implements\\horizontal_resize_function.js",
+              "ToolTip": "E:\\Program Files\\zinxs\\zikiSystem\\zikiE\\ZikiE\\wiki-main\\src\\main\\resources\\static\\js\\webmodules\\pageeditor\\modules\\functions\\function\\implements\\horizontal_resize_function.js",
+              "RelativeToolTip": "js\\webmodules\\pageeditor\\modules\\functions\\function\\implements\\horizontal_resize_function.js",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABQAAABEAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2024-07-01T18:09:59.112Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "summernote_function.js",
+              "DocumentMoniker": "E:\\Program Files\\zinxs\\zikiSystem\\zikiE\\ZikiE\\wiki-main\\src\\main\\resources\\static\\js\\webmodules\\pageeditor\\modules\\functions\\function\\implements\\summernote_function.js",
+              "RelativeDocumentMoniker": "js\\webmodules\\pageeditor\\modules\\functions\\function\\implements\\summernote_function.js",
+              "ToolTip": "E:\\Program Files\\zinxs\\zikiSystem\\zikiE\\ZikiE\\wiki-main\\src\\main\\resources\\static\\js\\webmodules\\pageeditor\\modules\\functions\\function\\implements\\summernote_function.js",
+              "RelativeToolTip": "js\\webmodules\\pageeditor\\modules\\functions\\function\\implements\\summernote_function.js",
+              "ViewState": "AQIAAJwAAAAAAAAAAAAAAK4AAAAFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2024-07-01T18:09:53.204Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "image_backend_function.js",
+              "DocumentMoniker": "E:\\Program Files\\zinxs\\zikiSystem\\zikiE\\ZikiE\\wiki-main\\src\\main\\resources\\static\\js\\webmodules\\pageeditor\\modules\\functions\\function\\implements\\image_backend_function.js",
+              "RelativeDocumentMoniker": "js\\webmodules\\pageeditor\\modules\\functions\\function\\implements\\image_backend_function.js",
+              "ToolTip": "E:\\Program Files\\zinxs\\zikiSystem\\zikiE\\ZikiE\\wiki-main\\src\\main\\resources\\static\\js\\webmodules\\pageeditor\\modules\\functions\\function\\implements\\image_backend_function.js",
+              "RelativeToolTip": "js\\webmodules\\pageeditor\\modules\\functions\\function\\implements\\image_backend_function.js",
+              "ViewState": "AQIAACYAAAAAAAAAAAAAwAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2024-07-01T18:09:51.871Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "function.js",
+              "DocumentMoniker": "E:\\Program Files\\zinxs\\zikiSystem\\zikiE\\ZikiE\\wiki-main\\src\\main\\resources\\static\\js\\webmodules\\pageeditor\\modules\\functions\\function\\function.js",
+              "RelativeDocumentMoniker": "js\\webmodules\\pageeditor\\modules\\functions\\function\\function.js",
+              "ToolTip": "E:\\Program Files\\zinxs\\zikiSystem\\zikiE\\ZikiE\\wiki-main\\src\\main\\resources\\static\\js\\webmodules\\pageeditor\\modules\\functions\\function\\function.js",
+              "RelativeToolTip": "js\\webmodules\\pageeditor\\modules\\functions\\function\\function.js",
+              "ViewState": "AQIAAD0AAAAAAAAAAAAQwEEAAAA4AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2024-07-01T18:08:40.6Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "text_toolbar.js",
+              "DocumentMoniker": "E:\\Program Files\\zinxs\\zikiSystem\\zikiE\\ZikiE\\wiki-main\\src\\main\\resources\\static\\js\\webmodules\\pageeditor\\modules\\toolbar\\implements\\text_toolbar.js",
+              "RelativeDocumentMoniker": "js\\webmodules\\pageeditor\\modules\\toolbar\\implements\\text_toolbar.js",
+              "ToolTip": "E:\\Program Files\\zinxs\\zikiSystem\\zikiE\\ZikiE\\wiki-main\\src\\main\\resources\\static\\js\\webmodules\\pageeditor\\modules\\toolbar\\implements\\text_toolbar.js",
+              "RelativeToolTip": "js\\webmodules\\pageeditor\\modules\\toolbar\\implements\\text_toolbar.js",
+              "ViewState": "AQIAAJEAAAAAAAAAAAAmwL0AAABQAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2024-07-01T18:07:17.511Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "toolbar.js",
+              "DocumentMoniker": "E:\\Program Files\\zinxs\\zikiSystem\\zikiE\\ZikiE\\wiki-main\\src\\main\\resources\\static\\js\\webmodules\\pageeditor\\modules\\toolbar\\implements\\toolbar.js",
+              "RelativeDocumentMoniker": "js\\webmodules\\pageeditor\\modules\\toolbar\\implements\\toolbar.js",
+              "ToolTip": "E:\\Program Files\\zinxs\\zikiSystem\\zikiE\\ZikiE\\wiki-main\\src\\main\\resources\\static\\js\\webmodules\\pageeditor\\modules\\toolbar\\implements\\toolbar.js",
+              "RelativeToolTip": "js\\webmodules\\pageeditor\\modules\\toolbar\\implements\\toolbar.js",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAuwAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2024-07-01T18:07:16.824Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "utility.js",
+              "DocumentMoniker": "E:\\Program Files\\zinxs\\zikiSystem\\zikiE\\ZikiE\\wiki-main\\src\\main\\resources\\static\\js\\webmodules\\pageeditor\\modules\\utilities\\utility\\utility.js",
+              "RelativeDocumentMoniker": "js\\webmodules\\pageeditor\\modules\\utilities\\utility\\utility.js",
+              "ToolTip": "E:\\Program Files\\zinxs\\zikiSystem\\zikiE\\ZikiE\\wiki-main\\src\\main\\resources\\static\\js\\webmodules\\pageeditor\\modules\\utilities\\utility\\utility.js",
+              "RelativeToolTip": "js\\webmodules\\pageeditor\\modules\\utilities\\utility\\utility.js",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2024-07-01T18:07:01.682Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "text_utility_v2.js",
+              "DocumentMoniker": "E:\\Program Files\\zinxs\\zikiSystem\\zikiE\\ZikiE\\wiki-main\\src\\main\\resources\\static\\js\\webmodules\\pageeditor\\modules\\utilities\\utility\\implements\\text_utility_v2.js",
+              "RelativeDocumentMoniker": "js\\webmodules\\pageeditor\\modules\\utilities\\utility\\implements\\text_utility_v2.js",
+              "ToolTip": "E:\\Program Files\\zinxs\\zikiSystem\\zikiE\\ZikiE\\wiki-main\\src\\main\\resources\\static\\js\\webmodules\\pageeditor\\modules\\utilities\\utility\\implements\\text_utility_v2.js",
+              "RelativeToolTip": "js\\webmodules\\pageeditor\\modules\\utilities\\utility\\implements\\text_utility_v2.js",
+              "ViewState": "AQIAADoAAAAAAAAAAAAQwAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2024-07-01T18:07:00.864Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "utility_function_interface.js",
+              "DocumentMoniker": "E:\\Program Files\\zinxs\\zikiSystem\\zikiE\\ZikiE\\wiki-main\\src\\main\\resources\\static\\js\\webmodules\\pageeditor\\modules\\utilities\\utility_function_interface.js",
+              "RelativeDocumentMoniker": "js\\webmodules\\pageeditor\\modules\\utilities\\utility_function_interface.js",
+              "ToolTip": "E:\\Program Files\\zinxs\\zikiSystem\\zikiE\\ZikiE\\wiki-main\\src\\main\\resources\\static\\js\\webmodules\\pageeditor\\modules\\utilities\\utility_function_interface.js",
+              "RelativeToolTip": "js\\webmodules\\pageeditor\\modules\\utilities\\utility_function_interface.js",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2024-07-01T18:06:15.024Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "image_utility.js",
+              "DocumentMoniker": "E:\\Program Files\\zinxs\\zikiSystem\\zikiE\\ZikiE\\wiki-main\\src\\main\\resources\\static\\js\\webmodules\\pageeditor\\modules\\utilities\\utility\\implements\\image_utility.js",
+              "RelativeDocumentMoniker": "js\\webmodules\\pageeditor\\modules\\utilities\\utility\\implements\\image_utility.js",
+              "ToolTip": "E:\\Program Files\\zinxs\\zikiSystem\\zikiE\\ZikiE\\wiki-main\\src\\main\\resources\\static\\js\\webmodules\\pageeditor\\modules\\utilities\\utility\\implements\\image_utility.js",
+              "RelativeToolTip": "js\\webmodules\\pageeditor\\modules\\utilities\\utility\\implements\\image_utility.js",
+              "ViewState": "AQIAADoAAAAAAAAAAAAQwAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2024-07-01T18:06:11.948Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "utility_factory.js",
+              "DocumentMoniker": "E:\\Program Files\\zinxs\\zikiSystem\\zikiE\\ZikiE\\wiki-main\\src\\main\\resources\\static\\js\\webmodules\\pageeditor\\modules\\utilities\\utility_factory.js",
+              "RelativeDocumentMoniker": "js\\webmodules\\pageeditor\\modules\\utilities\\utility_factory.js",
+              "ToolTip": "E:\\Program Files\\zinxs\\zikiSystem\\zikiE\\ZikiE\\wiki-main\\src\\main\\resources\\static\\js\\webmodules\\pageeditor\\modules\\utilities\\utility_factory.js",
+              "RelativeToolTip": "js\\webmodules\\pageeditor\\modules\\utilities\\utility_factory.js",
+              "ViewState": "AQIAACMAAAAAAAAAAAAAACMAAAAZAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2024-07-01T18:06:10.948Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "page_editor_view.js",
+              "DocumentMoniker": "E:\\Program Files\\zinxs\\zikiSystem\\zikiE\\ZikiE\\wiki-main\\src\\main\\resources\\static\\js\\webmodules\\pageeditor\\modules\\page_editor_view.js",
+              "RelativeDocumentMoniker": "js\\webmodules\\pageeditor\\modules\\page_editor_view.js",
+              "ToolTip": "E:\\Program Files\\zinxs\\zikiSystem\\zikiE\\ZikiE\\wiki-main\\src\\main\\resources\\static\\js\\webmodules\\pageeditor\\modules\\page_editor_view.js",
+              "RelativeToolTip": "js\\webmodules\\pageeditor\\modules\\page_editor_view.js",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAE8AAABSAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2024-07-01T18:05:52.227Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "utility_helper.js",
+              "DocumentMoniker": "E:\\Program Files\\zinxs\\zikiSystem\\zikiE\\ZikiE\\wiki-main\\src\\main\\resources\\static\\js\\webmodules\\pageeditor\\modules\\editor\\utility_helper.js",
+              "RelativeDocumentMoniker": "js\\webmodules\\pageeditor\\modules\\editor\\utility_helper.js",
+              "ToolTip": "E:\\Program Files\\zinxs\\zikiSystem\\zikiE\\ZikiE\\wiki-main\\src\\main\\resources\\static\\js\\webmodules\\pageeditor\\modules\\editor\\utility_helper.js",
+              "RelativeToolTip": "js\\webmodules\\pageeditor\\modules\\editor\\utility_helper.js",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2024-07-01T18:05:50.251Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "utility_creation_module.js",
+              "DocumentMoniker": "E:\\Program Files\\zinxs\\zikiSystem\\zikiE\\ZikiE\\wiki-main\\src\\main\\resources\\static\\js\\webmodules\\pageeditor\\modules\\editor\\utility_modules\\implements\\utility_creation_module.js",
+              "RelativeDocumentMoniker": "js\\webmodules\\pageeditor\\modules\\editor\\utility_modules\\implements\\utility_creation_module.js",
+              "ToolTip": "E:\\Program Files\\zinxs\\zikiSystem\\zikiE\\ZikiE\\wiki-main\\src\\main\\resources\\static\\js\\webmodules\\pageeditor\\modules\\editor\\utility_modules\\implements\\utility_creation_module.js",
+              "RelativeToolTip": "js\\webmodules\\pageeditor\\modules\\editor\\utility_modules\\implements\\utility_creation_module.js",
+              "ViewState": "AQIAABAAAAAAAAAAAAAQwDMAAABkAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2024-07-01T17:08:59.322Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

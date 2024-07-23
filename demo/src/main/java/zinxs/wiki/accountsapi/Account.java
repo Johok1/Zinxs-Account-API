@@ -5,11 +5,12 @@ import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
-import org.apache.catalina.User;
+
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
-import zinxs.wiki.pagesapi.Page;
+import zinxs.wiki.jsonobjects.AccountPageHeaderResponse;
+
 
 import javax.persistence.*;
 import java.util.ArrayList;
@@ -41,7 +42,7 @@ public class Account implements UserDetails {
     )
     private Long id;
 
-    private ArrayList<Page> pages;
+    private ArrayList<AccountPageHeaderResponse> pages;
     private String username, password, email, nickname;
 
     @Lob

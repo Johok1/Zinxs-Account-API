@@ -10,7 +10,7 @@ import zinxs.wiki.accountsapi.AccountRepository;
 
 import zinxs.wiki.accountsapi.utilities.AuthTokenUtils;
 import zinxs.wiki.jsonobjects.AccountPageHeaderResponse;
-import zinxs.wiki.pagesapi.Page;
+
 
 import java.io.File;
 import java.util.ArrayList;
@@ -39,30 +39,16 @@ public class ProfileService {
     }
 
 
-    public Resource getAccountPageLogo(String token, String pageId){
-        try{
-            Account account = getAccount(token);
-            List<Page> pages = account.getPages();
-            for(Page page: pages){
-                if(page.getId().equals(Long.valueOf(pageId))){
-                    return new UrlResource(new File(page.getImgFilepath()).toURI());
 
-                }
-            }
-            throw new Exception("no pages matching id!");
-        }catch (Exception e){
-            throw new RuntimeException(e);
-        }
-    }
 
     public List<AccountPageHeaderResponse> getAccountPageHeaders(String token){
         try{
             Account account = getAccount(token);
             List<AccountPageHeaderResponse> pageHeaders = new ArrayList<>();
-            List<Page> pages = account.getPages();
-            for(Page page: pages){
+            List<AccountPageHeaderResponse> pages = account.getPages();
+            for(AccountPageHeaderResponse page: pages){
                 AccountPageHeaderResponse response = new AccountPageHeaderResponse(
-                        String.valueOf(page.getId()),
+                        String.valueOf(page.getPageId()),
                         page.getPageName()
                 );
                 pageHeaders.add(response);

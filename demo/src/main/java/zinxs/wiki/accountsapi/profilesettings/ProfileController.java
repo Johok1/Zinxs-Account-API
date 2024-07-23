@@ -79,11 +79,7 @@ public class ProfileController {
         return profileService.getAccountPageHeaders(token);
     }
 
-    @CrossOrigin
-    @GetMapping( value ="getAccountPageLogo/{token}/{pageId}", produces = MediaType.IMAGE_JPEG_VALUE)
-    public @ResponseBody Resource getAccountPageLogo(@PathVariable String token, @PathVariable String pageId){
-        return profileService.getAccountPageLogo(token, pageId);
-    }
+
 
 
 }

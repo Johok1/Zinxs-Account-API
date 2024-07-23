@@ -11,8 +11,8 @@
 	<groupId>zinxs</groupId>
 	<artifactId>wiki</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>alpha</name>
-	<description>backend for phase alpha</description>
+	<name>alpha account</name>
+	<description>backend for phase alpha account api</description>
 	<properties>
 		<java.version>15</java.version>
 	</properties>

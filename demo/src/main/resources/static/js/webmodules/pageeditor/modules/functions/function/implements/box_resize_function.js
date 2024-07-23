@@ -50,13 +50,13 @@ export default class BoxResizeFunction extends Function {
         let newImageHeight = imageHeight + movementY
 
         let oldImageWidth = this.element.querySelector(".image-main").style.width
-        let oldImageHeight = this.element.querySelector(".image-main").style.height 
+        let oldImageHeight = this.element.querySelector(".image-main").style.height
 
         this.element.style.width = `${newWidth}px`;
         this.element.style.height = `${newHeight}px`;
 
-        this.element.querySelector(".image-main").style.width = newImageWidth + "px"
-        this.element.querySelector(".image-main").style.height = newImageHeight + "px"
+        this.element.querySelector(".image-main").style.width = newWidth + "px"
+        this.element.querySelector(".image-main").style.height = newHeight + "px"
 
         let newRect = this.element.getBoundingClientRect()
         let utilityList = container.querySelectorAll(".utility")
@@ -68,14 +68,14 @@ export default class BoxResizeFunction extends Function {
             resizeButton.style.left = oldResizeButtonLeft
             resizeButton.style.top = oldResizeButtonTop
           //  cancelImageButton.style.top = oldCancelImageButtonStyleTop
-            this.element.querySelector(".image-main").style.width = oldImageWidth  
-            this.element.querySelector(".image-main").style.height = oldImageHeight 
+            this.element.querySelector(".image-main").style.width = oldWidth
+            this.element.querySelector(".image-main").style.height = oldHeight
            
 
         } else {
 
             for (let z = 0; z < utilityList.length; z++) {
-                utilityList[z].style.border = "none"
+            //    utilityList[z].style.border = "none"
             }
         }
     }
@@ -83,25 +83,28 @@ export default class BoxResizeFunction extends Function {
    
 
     isUtilityCollision = (utilityList, newRect) => {
-        let utilityCollision = false
-        for (let x = 0; x < utilityList.length; x++) {
-            if ((utilityList[x].getAttribute("layer") == this.element.getAttribute("layer")) && utilityList[x] != this.element) {
-                let utilityRect = utilityList[x].getBoundingClientRect()
-                let rect1 = newRect
-                let rect2 = utilityRect
-                console.log("same layer collision possible")
-                if (!(rect2.x > rect1.x + rect1.width ||
-                    rect2.x + rect2.width < rect1.x ||
-                    rect2.y > rect1.y + rect1.height ||
-                    rect2.y + rect2.height < rect1.y)) {
-                    utilityCollision = true
-                    console.log("isColliding")
-                    utilityList[x].style.border = "2px solid red"
-                }
-            } else {
-                console.log("no collisions on different layers")
-            }
-        }
-        return utilityCollision;
-    }
+           let utilityCollision = false
+           for (let x = 0; x < utilityList.length; x++) {
+           if((utilityList[x].classList.contains("text") && this.element.classList.contains("text") )||
+               (utilityList[x].classList.contains("image") && this.element.classList.contains("image"))){
+               if ((utilityList[x].getAttribute("layer") == this.element.getAttribute("layer")) && utilityList[x] != this.element) {
+                   let utilityRect = utilityList[x].querySelector(".main").getBoundingClientRect()
+                   let rect1 = newRect
+                   let rect2 = utilityRect
+                  // console.log("same layer collision possible")
+                   if (!(rect2.x > rect1.x + rect1.width ||
+                       rect2.x + rect2.width < rect1.x ||
+                       rect2.y > rect1.y + rect1.height ||
+                       rect2.y + rect2.height < rect1.y)) {
+                       utilityCollision = true
+                     // console.log("isColliding")
+                   //    utilityList[x].style.border = "2px solid red"
+                   }
+               } else {
+                 //  console.log("no collisions on different layers")
+               }
+           }
+           }
+           return utilityCollision;
+       }
 }

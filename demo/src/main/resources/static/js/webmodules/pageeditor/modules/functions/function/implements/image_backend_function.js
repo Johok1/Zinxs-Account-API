@@ -40,8 +40,8 @@ export default class ImageBackendFunction extends Function{
 
             this.processFile(file)
                 .then(result => {
-                    console.log("process file result " + result)
-                    console.log("file " + file.name)
+                   // console.log("process file result " + result)
+                  //  console.log("file " + file.name)
 
                     this.element.querySelector(".image-main").src = URL.createObjectURL(result)
 
@@ -144,8 +144,8 @@ export default class ImageBackendFunction extends Function{
         
         this.processFile(file)
             .then(result => {
-                console.log("process file result " + result)
-                console.log("file " + file.name)
+                //console.log("process file result " + result)
+               // console.log("file " + file.name)
 
                 this.element.querySelector(".image-main").src = URL.createObjectURL(result)
 
@@ -188,7 +188,7 @@ export default class ImageBackendFunction extends Function{
             .then(response => response.text())
             .then(response => {
                 if (response === "true") {
-                    console.log("Image Submitted Successfully!")
+                   // console.log("Image Submitted Successfully!")
                 } else {
                     console.error(response)
                 }
@@ -199,7 +199,7 @@ export default class ImageBackendFunction extends Function{
         if (!file) {
             return;
         }
-        console.log(file);
+       // console.log(file);
 
 
         // Load the data into an image
@@ -223,7 +223,7 @@ export default class ImageBackendFunction extends Function{
                     ctx.drawImage(rawImage, 0, 0);
 
                     canvas.toBlob(function (blob) {
-                        console.log("blob" + blob)
+                     //   console.log("blob" + blob)
 
                         resolve(blob);
                     }, "image/webp");

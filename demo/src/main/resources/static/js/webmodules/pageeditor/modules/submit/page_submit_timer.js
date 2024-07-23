@@ -11,7 +11,7 @@ export default class PageSubmitTimer {
         if (this.id != null) {
             clearInterval(this.id)
         } else {
-            console.log("no id set : "  + this.id)
+           // console.log("no id set : "  + this.id)
         }
     }
 
@@ -26,10 +26,10 @@ export default class PageSubmitTimer {
             this.backendManager.controller.postAccountPageContent(cookie.getCookie("token"), cookie.getCookie("pageId"), page.outerHTML)
                 .then(response => response.text())
                 .then(response => {
-                    console.log("post page response: " + response)
+                   // console.log("post page response: " + response)
                 })
         } else {
-            console.log("cannot submit while dragging or editing")
+           // console.log("cannot submit while dragging or editing")
         }
     }
 }

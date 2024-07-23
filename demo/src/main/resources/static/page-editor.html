@@ -18,6 +18,12 @@
 </script>
 		  <script src="https://cdnjs.cloudflare.com/ajax/libs/feather-icons/4.29.0/feather.min.js" crossorigin="anonymous"></script>
 		  <style type="text/css">
+			  
+			  div{
+				  margin-bottom: 0rem;
+				  padding-bottom: 0rem !important;
+			  }
+			  
 	.text{
   position: absolute;
   color: black; 
@@ -102,7 +108,6 @@
 
 
 body {
-	overflow-x: hidden;
 
 }
 
@@ -188,6 +193,7 @@ main {
 
 .scrollarea {
   overflow-y: auto;
+  overflow-x: visible !important;
 }
 
 .fw-semibold { font-weight: 600; }
@@ -244,15 +250,20 @@ main {
   box-sizing: border-box;
 }
 
+body{
+	overflow-x: visible!important;
+	overflow-y: auto !important; 
+
+}
+
 html {
   font-family: sans-serif;
   line-height: 1.15;
   -webkit-text-size-adjust: 100%;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-		overflow-x: hidden;
-	  overflow-y: hidden;
-  scrollbar-color: transparent transparent;
-  scrollbar-width: thin;
+		overflow-x: auto;
+	  overflow-y: auto;
+ 
 }
 
 [contenteditable]:focus {
@@ -10508,7 +10519,7 @@ a.text-dark:hover, a.text-dark:focus {
         <script data-search-pseudo-elements defer src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/js/all.min.js" crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/feather-icons/4.29.0/feather.min.js" crossorigin="anonymous"></script>
     </head>
-    <body class="nav-fixed" style="user-select: none">
+    <body class="nav-fixed" style="user-select: none;">
 		
 		  <script src="js/jscolor.js"></script>
         <nav class="topnav navbar navbar-expand shadow justify-content-between justify-content-sm-start" id="sidenavAccordion">
@@ -10597,14 +10608,14 @@ a.text-dark:hover, a.text-dark:focus {
  
 				
          
-                <main style="height: auto; margin-top: 100px; ">
+                <main style="height: auto; margin-top: 100px; margin-left: 30px ">
 					<nav class="nav" style=" margin-left: 80px"><img class="btn btn-icon" id="pageLogo" id="pageLogo" src="assets/img/Zinks_png.png">
-                        <h2 style=id="pageName">Page Name</h2>
+                        <h2 id="pageName">Page Name</h2>
 						
 						
 					</nav>
 					<div id="creationDiv" style="height: auto; margin-left: 80px " class="row">
-					<div id="page"  class=" card" style="height: 1820px; margin-bottom: 30px; width: 900px; ; z-index: 6; opacity: 90%; ">
+					<div id="page"  class="card" style="height: 1820px; margin-bottom: 30px; width: 1000px; ; z-index: 6; opacity: 90%; ">
 					
 					<svg id="resizePageBtn" xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 22 22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-circle click" data-feather="circle" style="color: #BAA21F;margin-left: 96%; margin-top: 1780px; position: absolute"></svg>
 					
@@ -10645,6 +10656,14 @@ a.text-dark:hover, a.text-dark:focus {
 							<label for="customRange1" class="form-label">Hide a Layer</label>
 							<input id="hideLayerInput" type="number" style="width: 40%; margin-top: 5%" class="" id="customRange1" value="1" min="1" max="100">
 							<btn id="hideLayerBtn" class ="btn" style="height:10%; margin-top:0%"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-feather="check" class="feather feather-check"style="color: #BAA21F;"></svg></btn>
+						</div>
+								<div class="input-group-sm view" style="margin: 2%;">
+							<label for="customRange1" class="form-label">Width</label>
+							<input id="widthInput" type="number" style="width: 30%; margin-top: 5%" class="" id="customRange1" value="1" min="100" max="10000">
+									<br>
+						    <label for="customRange1" class="form-label">Height</label>
+							<input id="heightInput" type="number" style="width: 30%; margin-top: 5%" class="" id="customRange1" value="1" min= "100" max="10000">
+							</btn>
 						</div>
 						</div>
 						</div>

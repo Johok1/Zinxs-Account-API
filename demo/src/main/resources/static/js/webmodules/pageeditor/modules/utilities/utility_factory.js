@@ -15,7 +15,7 @@ export default class UtilityFactory {
     constructTextUtility = (layer) => {
         const page = document.getElementById("page");
         const font = this.createElement('font', { innerText: 'New Text' }, { color: 'black' });
-        const label = this.createElement('p', { draggable: false, className: 'textParagraph' }, {});
+        const label = this.createElement('p', { draggable: false, className: 'textParagraph main' }, {});
         label.style.overflowY ="auto"
         label.appendChild(font);
         label.id = "par"
@@ -24,7 +24,7 @@ export default class UtilityFactory {
 
         const labelDivStyles = {
             width: '300px', overflowY: 'auto',
-            position: 'absolute', wordWrap: 'break-word', zIndex: layer
+            position: 'absolute', wordWrap: 'break-word', zIndex: `${parseInt(layer) + 1}`
         };
         const labelDiv = this.createElement('div', { className: 'utility text drag' }, labelDivStyles);
 
@@ -34,7 +34,7 @@ export default class UtilityFactory {
         parDiv.style.overflowY = "auto"
 
         parDiv.appendChild(label)
-        parDiv.classList.add("main")
+
         // parDiv.style.zIndex = "2"
         labelDiv.setAttribute("layer", layer)
 
@@ -70,7 +70,7 @@ export default class UtilityFactory {
         let div = this.createElement('div', { className: 'utility image drag', draggable: false }, imgStyles)
         div.style.width = img.style.width
         div.style.height = img.style.height
-        div.style.zIndex = layer
+        div.style.zIndex =`${parseInt(layer)+1}`
         div.setAttribute("layer",layer)
         div.appendChild(img)
        
@@ -86,7 +86,7 @@ export default class UtilityFactory {
         } else if (element.classList.contains("image")) {
             return new ImageUtility(element);
         } else {
-            console.log("Invalid element");
+         //   console.log("Invalid element");
             return null; // It's better to return null for invalid cases for consistency
         }
     }

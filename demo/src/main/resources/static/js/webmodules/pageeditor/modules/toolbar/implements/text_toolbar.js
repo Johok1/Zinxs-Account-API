@@ -132,7 +132,7 @@ export default class TextToolbar extends Toolbar{
 
       //  this.positionEditBtn(this.element, this.editTextBtn)
         //this.positionExitBtn(this.element, this.cancelSelectionBtn)
-        this.positionResizeElement(this.element, this.resizeButton)
+        this.updateToolbarPosition()
    
         document.feather.replace()
         
@@ -145,8 +145,12 @@ export default class TextToolbar extends Toolbar{
     updateToolbarPosition = () => {
 
      //   this.positionEditBtn(this.element, this.editTextBtn)
-        this.positionExitBtn(this.element, this.cancelSelectionBtn)
-        this.positionResizeElement(this.element, this.resizeButton)
+       // this.positionExitBtn(this.element, this.cancelSelectionBtn)
+              let positionResizeElement = this.positionResizeElement
+                let element = this.element
+                let resizeButton = this.resizeButton
+              //  this.positionExitBtn(this.element, this.cancelSelectionBtn)
+               this.intervalId = setInterval(function(){ positionResizeElement(element, resizeButton)},2)
     }
 
     positionEditBtn = (element1, element2) => {
@@ -187,12 +191,13 @@ export default class TextToolbar extends Toolbar{
         // Set position of the second element
         element2.style.position = 'absolute';
         element2.style.left = (rect.width + (rect.left - pageRect.left)) + 'px';
-        element2.style.top = (rect.height + (rect.top - pageRect.top) +15) + 'px';
+        element2.style.top = (rect.height + (rect.top - pageRect.top) -17.5) + 'px';
     }
 
 
     deconstructToolbar = () => {
         $('.text-popup').remove()
+        window.clearInterval(this.intervalId)
     }
 
 

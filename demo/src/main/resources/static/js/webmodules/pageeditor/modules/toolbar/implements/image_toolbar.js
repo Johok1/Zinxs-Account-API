@@ -107,9 +107,11 @@ export default class ImageToolbar extends Toolbar{
 
     updateToolbarPosition = () => {
 
-
+        let positionResizeElement = this.positionResizeElement
+        let element = this.element
+        let resizeButton = this.resizeButton
       //  this.positionExitBtn(this.element, this.cancelSelectionBtn)
-        this.positionResizeElement(this.element, this.resizeButton)
+       this.intervalId = setInterval(function(){ positionResizeElement(element, resizeButton)},2)
     }
 
     positionResizeElement = (element1, element2) => {
@@ -121,8 +123,8 @@ export default class ImageToolbar extends Toolbar{
         var pageRect = document.getElementById("page").getBoundingClientRect();
         // Set position of the second element
         element2.style.position = 'absolute';
-        element2.style.left = (rect.width + (rect.left-pageRect.left)) + 'px';
-        element2.style.top =  (rect.height + (rect.top-pageRect.top)) + 'px';
+        element2.style.left = (rect.width + (rect.left-pageRect.left-8)) + 'px';
+        element2.style.top =  (rect.height + (rect.top-pageRect.top-8)) + 'px';
     }
 
 
@@ -143,6 +145,7 @@ export default class ImageToolbar extends Toolbar{
 
     deconstructToolbar = () => {
         $('.image-popup').remove()
+        window.clearInterval(this.intervalId)
     }
 
 

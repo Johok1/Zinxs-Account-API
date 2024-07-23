@@ -8,18 +8,18 @@ export default class Utility {
     }
 
     selectElement = () => {
-        console.log("Must override selectElement")
+     //   console.log("Must override selectElement")
     }
 
     deselectElement = () => {
-        console.log("Must override deselectElement")
+     //   console.log("Must override deselectElement")
     }
 
     constructToolbar = () => {
-        console.log("Must override constructToolbar")
+     //   console.log("Must override constructToolbar")
     }
 
     enableDrag = () => {
-        console.log("Must override enableDrag")
+     //   console.log("Must override enableDrag")
     }
 }

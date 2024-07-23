@@ -7,6 +7,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.web.multipart.MultipartFile;
 import zinxs.wiki.accountsapi.Account;
 import zinxs.wiki.accountsapi.AccountRepository;
+
 import zinxs.wiki.accountsapi.utilities.AuthTokenUtils;
 import zinxs.wiki.jsonobjects.AccountPageHeaderResponse;
 import zinxs.wiki.pagesapi.Page;

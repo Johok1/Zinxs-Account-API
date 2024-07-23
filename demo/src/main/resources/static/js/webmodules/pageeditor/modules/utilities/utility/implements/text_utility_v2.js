@@ -8,13 +8,14 @@ export default class TextUtility extends Utility {
         this.toolbar.registerElement(this.element)
         this.functions = this.utilityFunctionInterface.functionFacade.textFunctionFacade
         this.functions.horizontalResizeFunction.setElement(this.element)
+        this.positionResize = this.toolbar.positionResizeElement
     }
 
     selectElement = () => {
         document.getElementById("page").classList.add("editing")
      
-        this.functions.summernoteFunction.disableDragMode(this.element)
-        this.element.querySelector(".main").style.border = "solid 2px red"
+       // this.functions.summernoteFunction.disableDragMode(this.element)
+       // this.element.querySelector(".main").style.border = "solid 2px red"
         this.summernoteHandleEditText()
         this.toolbar.deleteUtilityBtn.addEventListener("click", this.deleteUtility)
     }
@@ -23,7 +24,7 @@ export default class TextUtility extends Utility {
 
         document.getElementById("page").classList.remove("editing")
 
-        this.element.querySelector(".main").style.border = "none"
+      //  this.element.querySelector(".main").style.border = "none"
         this.functions.summernoteFunction.handleDisableEditText(this.constructToolbar, this.element)
         this.functions.summernoteFunction.enableDragMode(this.element)
         this.deconstructToolbar()
@@ -63,13 +64,16 @@ export default class TextUtility extends Utility {
         this.toolbar.resizeButton.addEventListener("mousedown", (event) => {
             // Initiate resizing - attach mousemove to document
             toolbar.resizeButton.addEventListener("mousemove", onBoxResize);
+            document.addEventListener("mousemove", onBoxResize)
             //  updateToolbar()
             event.preventDefault(); // Prevent default drag behavior
         });
 
         document.addEventListener("mouseup", () => {
             // End resizing - remove mousemove from document
+            updateToolbar()
             toolbar.resizeButton.removeEventListener("mousemove", onBoxResize);
+            document.removeEventListener("mousemove",onBoxResize)
         });
 
     }
@@ -79,7 +83,7 @@ export default class TextUtility extends Utility {
     }
 
     summernoteHandleEditText = () => {
-        this.functions.summernoteFunction.handleEditText(this.element, this.deconstructToolbar, this.constructToolbar)
+        this.functions.summernoteFunction.handleEditText(this.element, this.deconstructToolbar, this.constructToolbar,this.positionResize)
     }
 
 

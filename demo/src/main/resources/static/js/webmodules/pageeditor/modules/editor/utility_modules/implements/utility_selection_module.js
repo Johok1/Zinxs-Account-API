@@ -11,12 +11,12 @@ export default class UtilitySelectionModule extends UtilitySelectionModuleInterf
 
     selectFunc = (utilityElementSelected) => {
       
-        console.log(this.selectedEl)
-        console.log(utilityElementSelected.element)
+      //  console.log(this.selectedEl)
+     //   console.log(utilityElementSelected.element)
 
 
         if (this.selectedEl && !(this.selectedEl === utilityElementSelected)) {
-            console.log("select case 1")
+         //   console.log("select case 1")
             this.selectedEl.deselectElement();
             this.selectedEl.enableDrag()
            
@@ -30,7 +30,7 @@ export default class UtilitySelectionModule extends UtilitySelectionModuleInterf
 
         else if (!this.selectedEl && !(this.selectedEl === utilityElementSelected)) {
             // Assuming necessary for debugging
-            console.log("select case 2")
+         //   console.log("select case 2")
             utilityElementSelected.constructToolbar();
             utilityElementSelected.selectElement();
             this.selectedEl = utilityElementSelected;
@@ -39,7 +39,7 @@ export default class UtilitySelectionModule extends UtilitySelectionModuleInterf
         }
 
         else if (this.select && (this.selectedEl === utilityElementSelected)) {
-            console.log("select case 3")
+         //   console.log("select case 3")
             if ((document.querySelectorAll(".text-popup").length <= 0) && (document.querySelectorAll(".image-popup").length <= 0)) {
                 utilityElementSelected.constructToolbar();
                 utilityElementSelected.selectElement();

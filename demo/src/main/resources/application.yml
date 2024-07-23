@@ -2,8 +2,8 @@
 server:
   port: 443
   ssl:
-    key-store: j2vprojectkeystore.jks
-    key-store-password: LordhaveMercyImBoutToBust127590
+    key-store: keystore.jks
+    key-store-password: password
     keyStoreType: PKCS12
     keyAlias: 1
   error:
@@ -17,12 +17,18 @@ config:
 spring:
 
   datasource:
-    password: 21387866
+    password: postgres
     url: jdbc:postgresql://localhost:5432/postgres
     username: postgres
+    hikari:
+      maximum-pool-size: 10
+      minimum-idle: 5
+      idle-timeout: 60000
+      max-lifetime: 1800000
+      connection-timeout: 30000
   jpa:
     hibernate:
-      ddl-auto: create-drop
+      ddl-auto: update
     properties:
       hibernate:
         dialect: org.hibernate.dialect.PostgreSQLDialect

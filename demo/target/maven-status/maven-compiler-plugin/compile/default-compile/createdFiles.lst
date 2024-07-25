@@ -7,7 +7,6 @@ zinxs\wiki\webdirectories\account\AccountPagesDirectoryController.class
 zinxs\wiki\accountsapi\Account.class
 zinxs\wiki\webdirectories\login\LoginDirectoryController.class
 zinxs\wiki\webdirectories\register\RegisterDirectoryController.class
-zinxs\wiki\security\PasswordEncoder.class
 zinxs\wiki\webdirectories\page\PageEditorDirectoryController.class
 zinxs\wiki\cacheconfig\NoCacheFilter.class
 zinxs\wiki\AlphaApplication.class

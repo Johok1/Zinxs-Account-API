@@ -1,6 +1,6 @@
 export default class Controller {
     constructor() {
-        this.fetch_url_validation ="https://www.zinxswiki.com/api/v1/validation"
+        this.fetch_url_validation ="https://www.zinxswiki.com/validation"
     }
 
     postResetPasswordRequest(email) {

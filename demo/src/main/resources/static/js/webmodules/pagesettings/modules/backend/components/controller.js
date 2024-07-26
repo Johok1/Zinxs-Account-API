@@ -4,10 +4,10 @@ export default class Controller {
         this.fetch_url_image = "https://www.zinxswiki.com/image"
     }
 
-    postPageImage(token, pageId, file, filename) {
+    postPageImage( pageId, file, filename) {
         let formData = new FormData()
         formData.append('file', file)
-        return fetch(this.fetch_url_image + "/postPageImage/" + token + "/" + pageId + "/" + filename, {
+        return fetch(this.fetch_url_image + "/postPageImage/" + pageId + "/" + filename, {
             method: 'POST',
             headers: {
                 'Access-Control-Allow-Origin': '*',
@@ -20,8 +20,8 @@ export default class Controller {
 
     }
 
-    postPageName(token, pageId, pageName) {
-        return fetch(this.fetch_url_page + "/postPageName/" + token + "/" + pageId + "/" + pageName, {
+    postPageName(pageId, pageName) {
+        return fetch(this.fetch_url_page + "/postPageName/" + pageId + "/" + pageName, {
             method: 'POST',
             headers: {
                 'Access-Control-Allow-Origin': '*',

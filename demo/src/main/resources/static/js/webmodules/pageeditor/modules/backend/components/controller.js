@@ -1,6 +1,5 @@
 export default class Controller {
     constructor() {
-        this.fetch_url_profile = "https://www.zinxswiki.com/api/v1/profile"
         this.fetch_url_page = "https://www.zinxswiki.com/page"
         this.fetch_url_image = "https://www.zinxswiki.com/image"
     }
@@ -17,21 +16,21 @@ export default class Controller {
         });
     }
 
-    getPageImage(token, pageId) {
-        return fetch(this.fetch_url_profile + "/getAccountPageLogo/" + token + "/" + pageId, {
-            method: 'GET',
-            headers: {
-                'Access-Control-Allow-Origin': '*',
-                'Access-Control-Allow-Origin': '*'
-            }
-        }).catch(error => {
-            console.error(error)
-        });
+    getPageImage(pageId) {
+      return fetch(this.fetch_url_image + "/getPageImage/"  + pageId, {
+                 method: 'GET',
+                 headers: {
+                     'Access-Control-Allow-Origin': '*',
+                     'Access-Control-Allow-Origin': '*'
+                 }
+             }).catch(error => {
+                 console.error(error)
+             });
 
     }
 
-    getImageName(pageId, imageId) {
-        return fetch(this.fetch_url_image + "/getImageName/" + pageId + "/" + imageId, {
+    getImageName(imageId) {
+        return fetch(this.fetch_url_image + "/getImageName/"  + imageId, {
             method: 'GET',
             headers: {
                 'Access-Control-Allow-Origin': '*'
@@ -52,8 +51,8 @@ export default class Controller {
         });
     }
 
-    getPageImageUrl(pageId, imageId) {
-        return fetch(this.fetch_url_image + "/getPageImageUrl/" + pageId + "/" + imageId, {
+    getPageImageUrl( imageId) {
+        return fetch(this.fetch_url_image + "/getPageImageUrl/"  + imageId, {
             method: 'GET',
             headers: {
                 'Access-Control-Allow-Origin': '*'
@@ -63,12 +62,12 @@ export default class Controller {
         });
     }
 
-    addPageImageUrl(wixId, pageId, file, filename) {
+    addPageImageUrl( pageId, file, filename) {
         let formData = new FormData()
         formData.append('file', file)
         
       
-        return fetch(this.fetch_url_image + "/addPageImageUrl/" + wixId + "/" + pageId + "/" + filename, {
+        return fetch(this.fetch_url_image + "/addPageImageUrl/" + pageId + "/" + filename, {
             method: 'POST',
             headers: {
                 'Access-Control-Allow-Origin': '*',
@@ -80,8 +79,8 @@ export default class Controller {
         });
     }
 
-    getAccountPageContent(wixId, pageId) {
-        return fetch(this.fetch_url_page + "/getAccountPageContent/" + wixId + "/" + pageId, {
+    getAccountPageContent(pageId) {
+        return fetch(this.fetch_url_page + "/getAccountPageContent/"  + pageId, {
             method: 'GET',
             headers: {
                 'Access-Control-Allow-Origin': '*'
@@ -91,8 +90,8 @@ export default class Controller {
         });
     }
 
-    postAccountPageContent(wixId, pageId, content) {
-        return fetch(this.fetch_url_page + "/postAccountPageContent/" + wixId + "/" + pageId, {
+    postAccountPageContent(pageId, content) {
+        return fetch(this.fetch_url_page + "/postAccountPageContent/"  + pageId, {
             method: 'POST',
             headers: {
                 'Access-Control-Allow-Origin': '*',

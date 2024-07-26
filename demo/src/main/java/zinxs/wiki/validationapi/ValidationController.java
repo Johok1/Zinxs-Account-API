@@ -8,7 +8,7 @@ import zinxs.wiki.restobjects.request.LoginRequest;
 import zinxs.wiki.restobjects.request.RegistrationRequest;
 
 @RestController
-@RequestMapping(path = "api/v1/validation")
+@RequestMapping(path = "validation")
 @AllArgsConstructor
 public class ValidationController {
     //contains endpoints for registering and validating users

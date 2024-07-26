@@ -9,7 +9,7 @@ import zinxs.wiki.restobjects.response.AccountPageHeaderResponse;
 import java.util.List;
 
 @RestController
-@RequestMapping(path = "api/v1/profile")
+@RequestMapping(path = "profile")
 @AllArgsConstructor
 public class ProfileController {
 
@@ -76,6 +76,12 @@ public class ProfileController {
     @GetMapping("getAccountPageHeaders/{token}")
     public List<AccountPageHeaderResponse> getAccountPageHeaders(@PathVariable String token){
         return profileService.getAccountPageHeaders(token);
+    }
+
+    @CrossOrigin
+    @PostMapping("postProfilePage/{token}")
+    public String addProfilePage(@PathVariable String token, @RequestBody AccountPageHeaderResponse headerResponse){
+     return profileService.addProfilePage(token, headerResponse);
     }
 
 

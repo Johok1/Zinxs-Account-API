@@ -139,7 +139,7 @@ class View {
         let token = this.backendManager.cookie.getCookie("token")
         let pageLogo = this.pageLogo
         let pageName = this.pageName
-        this.backendManager.controller.getPageImage(token, pageId)
+        this.backendManager.controller.getPageImage( pageId)
             .then(response => response.blob())
             .then(response => {
                 document.getElementById("pageLogo").src = URL.createObjectURL(response)
@@ -162,7 +162,7 @@ class View {
         let initResizeEvents = this.initResizeEvents
         let widthInput = this.widthInput
         let heightInput = this.heightInput
-        return this.controller.getAccountPageContent(this.cookie.getCookie("token"), this.cookie.getCookie("pageId"))
+        return this.controller.getAccountPageContent(this.cookie.getCookie("pageId"))
             .then(response => response.text())
             .then(response => {
                 let layer = layerManager.getCurrentSelectedLayer()

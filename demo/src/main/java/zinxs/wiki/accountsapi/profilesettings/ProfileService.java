@@ -124,6 +124,15 @@ public class ProfileService {
         return account.getNickname();
     }
 
+    public String addProfilePage(String token, AccountPageHeaderResponse headerResponse){
+        Account account = getAccount(token);
+        ArrayList<AccountPageHeaderResponse> pages = account.getPages();
+        pages.add(headerResponse);
+        account.setPages(pages);
+        accountRepository.save(account);
+        return "true";
+    }
+
 
 
 

@@ -1,6 +1,6 @@
 export default class Controller {
     constructor() {
-        this.fetch_url_profile ="https://www.zinxswiki.com/api/v1/profile"
+        this.fetch_url_profile ="https://www.zinxswiki.com/profile"
     }
 
     setProfilePicture(token, input) {

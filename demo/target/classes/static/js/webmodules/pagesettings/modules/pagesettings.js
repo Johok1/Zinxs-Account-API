@@ -15,12 +15,12 @@ class PageSettings {
     }
 
     attachUpdatePageHandler = () => {
-        let token = this.backendManager.cookie.getCookie("token")
+
         let pageId = this.backendManager.cookie.getCookie("pageId")
         this.updatePageBtn.addEventListener("click", ()=> {
             if (this.pageNameInput.value != "") {
                 let name = pageNameInput.value
-                this.backendManager.controller.postPageName(token, pageId, name)
+                this.backendManager.controller.postPageName(pageId, name)
                     .then(response => {
                         console.log(response)
                     })
@@ -35,9 +35,9 @@ class PageSettings {
         let backendManager = this.backendManager
         this.pageLogoInput.addEventListener("change", (e) => {
             let file = e.target.files.item(0)
-            let token = backendManager.cookie.getCookie("token")
+
             let pageId = backendManager.cookie.getCookie("pageId")
-            backendManager.controller.postPageImage(token, pageId, file, file.name)
+            backendManager.controller.postPageImage( pageId, file, file.name)
                 .then(() => {
                     fileUtilities.processFile(file)
                         .then(response => {

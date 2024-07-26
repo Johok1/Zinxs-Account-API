@@ -22,7 +22,7 @@ class PageViewer {
                 for (let x = 0; x < response.length; x++) {
 
 
-                    backendManager.controller.getAccountPageLogo(token, response[x].pageId)
+                    backendManager.controller.getAccountPageLogo(response[x].pageId)
                         .then(data => data.blob())
                         .then(data => {
                             constructCard(response[x].pageName, response[x].pageId, data)

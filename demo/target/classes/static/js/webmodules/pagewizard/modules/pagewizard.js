@@ -26,13 +26,14 @@ class PageWizard {
     
         let name = pageNameInput.value
         let backendManager = this.backendManager
-            this.backendManager.controller.createAccountPage(this.backendManager.cookie.getCookie("token"), name)
+            this.backendManager.controller.createAccountPage(name)
                 .then(response => response.text())
                 .then(response => {
                     backendManager.cookie.setCookie("pageId", response)
-                    backendManager.controller.postPageImage(backendManager.cookie.getCookie("token"), response, this.imageLogoFile.name, this.imageLogoFile)
+                    backendManager.controller.postPageImage(response, this.imageLogoFile.name, this.imageLogoFile)
                         .then(response.ok)
                         .then(() => {
+                            backendManager.controller.addProfilePage(backendManager.cookie.getCookie("token"),response,name)
                             window.location.href = "https://www.zinxswiki.com/pageeditor"
                         })
                 })

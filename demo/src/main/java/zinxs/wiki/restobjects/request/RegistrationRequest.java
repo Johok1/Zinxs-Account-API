@@ -1,4 +1,4 @@
-package zinxs.wiki.jsonobjects;
+package zinxs.wiki.restobjects.request;
 
 import lombok.AllArgsConstructor;
 import lombok.EqualsAndHashCode;

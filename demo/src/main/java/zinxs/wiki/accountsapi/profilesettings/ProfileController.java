@@ -1,11 +1,10 @@
 package zinxs.wiki.accountsapi.profilesettings;
 
 import lombok.AllArgsConstructor;
-import org.springframework.core.io.Resource;
 import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
-import zinxs.wiki.jsonobjects.AccountPageHeaderResponse;
+import zinxs.wiki.restobjects.response.AccountPageHeaderResponse;
 
 import java.util.List;
 

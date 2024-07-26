@@ -1,4 +1,4 @@
-package zinxs.wiki.jsonobjects;
+package zinxs.wiki.restobjects.request;
 
 import lombok.AllArgsConstructor;
 import lombok.EqualsAndHashCode;
@@ -9,7 +9,8 @@ import lombok.ToString;
 @AllArgsConstructor
 @EqualsAndHashCode
 @ToString
-public class GoogleRegistrationRequest {
+public class TokenRequest {
+
     private final String token;
-    private final String blank;
+
 }

@@ -1,18 +1,15 @@
 package zinxs.wiki.accountsapi.profilesettings;
 
 import lombok.AllArgsConstructor;
-import org.springframework.core.io.Resource;
-import org.springframework.core.io.UrlResource;
 import org.springframework.stereotype.Service;
 import org.springframework.web.multipart.MultipartFile;
 import zinxs.wiki.accountsapi.Account;
 import zinxs.wiki.accountsapi.AccountRepository;
 
 import zinxs.wiki.accountsapi.utilities.AuthTokenUtils;
-import zinxs.wiki.jsonobjects.AccountPageHeaderResponse;
+import zinxs.wiki.restobjects.response.AccountPageHeaderResponse;
 
 
-import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;

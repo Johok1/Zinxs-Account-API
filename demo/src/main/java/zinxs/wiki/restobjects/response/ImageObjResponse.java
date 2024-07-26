@@ -1,19 +1,16 @@
-package zinxs.wiki.jsonobjects;
-
+package zinxs.wiki.restobjects.response;
 
 import lombok.AllArgsConstructor;
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.ToString;
-import org.springframework.web.multipart.MultipartFile;
+import org.springframework.core.io.Resource;
 
 @Getter
 @AllArgsConstructor
 @EqualsAndHashCode
 @ToString
-public class ImageItemUrlRequest {
-    private final MultipartFile file;
-
+public class ImageObjResponse {
     private final String filename;
-    private final String blank;
+    private final Resource file;
 }

@@ -1,5 +1,4 @@
-package zinxs.wiki.jsonobjects;
-
+package zinxs.wiki.restobjects.request;
 
 import lombok.AllArgsConstructor;
 import lombok.EqualsAndHashCode;
@@ -10,7 +9,7 @@ import lombok.ToString;
 @AllArgsConstructor
 @EqualsAndHashCode
 @ToString
-public class ImageUrlRequest {
-    private final String url;
-    private final String blank;
+public class LoginRequest {
+    private final String email;
+    private final String password;
 }

@@ -13,27 +13,30 @@ import org.springframework.web.servlet.ModelAndView;
 import zinxs.wiki.accountsapi.*;
 import zinxs.wiki.accountsapi.google.GoogleAccount;
 import zinxs.wiki.accountsapi.utilities.AuthTokenUtils;
-import zinxs.wiki.jsonobjects.GoogleRegistrationRequest;
-import zinxs.wiki.jsonobjects.LoginRequest;
-import zinxs.wiki.jsonobjects.RegistrationRequest;
-import zinxs.wiki.validationapi.confirmation.ConfirmationToken;
-import zinxs.wiki.validationapi.confirmation.ConfirmationTokenService;
+import zinxs.wiki.restobjects.request.GoogleRegistrationRequest;
+import zinxs.wiki.restobjects.request.LoginRequest;
+import zinxs.wiki.restobjects.request.RegistrationRequest;
+import zinxs.wiki.validationapi.token.confirmation.ConfirmationToken;
+import zinxs.wiki.validationapi.token.confirmation.ConfirmationTokenService;
 import zinxs.wiki.validationapi.email.EmailSender;
+import zinxs.wiki.validationapi.token.confirmation.Token;
 
 import java.time.LocalDateTime;
 import java.util.Collections;
+import java.util.Optional;
+import java.util.UUID;
 
 @Service
 @AllArgsConstructor
 public class ValidationService {
 
 
-
-    private final AccountService accountService;
+    private final static String USER_NOT_FOUND_MSG =
+            "user with email %s not found";
 
     private final AccountRepository accountRepository;
 
-    //private final EmailValidator emailValidator;
+
     private final ConfirmationTokenService confirmationTokenService;
     private final EmailSender emailSender;
 
@@ -105,7 +108,7 @@ public class ValidationService {
     public String login(LoginRequest loginRequest) {
         String token = "";
         try{
-            Account account = accountService.getAccount(loginRequest);
+            Account account = getAccount(loginRequest);
             if(account != null) {
                 if(account.isEnabled()) {
                     token = authTokenUtils.generateTempToken(loginRequest.getEmail(), loginRequest.getPassword());
@@ -144,16 +147,19 @@ public class ValidationService {
             }
 
 
-            /*
-            if(!request.getConfirmPassword().equals(request.getPassword())){
+
+          /*
+                No confirm password in request object
+          if(!request.getConfirmPassword().equals(request.getPassword())){
                 return "Passwords do no match";
             }
+
+           */
             if(request.getPassword().length() < 5){
                 return "Password must be at least 5 characters long";
             }
-            */ //do this shit in the frontend plz
 
-            String token = accountService.signUpUser(
+            String token = signUpUser(
                     new Account(
                             request.getUsername(),
                             request.getEmail(),
@@ -165,9 +171,9 @@ public class ValidationService {
 
             new Thread(() -> {
                 String link = "https://www.zinxswiki.com/api/v1/validation/confirm?token=" + token;
-                emailSender.send(
+                emailSender.sendSignUpEmail(
                         request.getEmail(),
-                        buildEmail(request.getUsername(), link));
+                        request.getUsername(), link);
             }).start();
 
             return "true";
@@ -195,7 +201,7 @@ public class ValidationService {
                 String email = payload.getEmail();
                 String username = email.split("@")[0];
 
-                String token = accountService.signUpUser(
+                String token = signUpUser(
                         new GoogleAccount(
                                 username,
                                 email,
@@ -205,10 +211,7 @@ public class ValidationService {
                 );
 
                 new Thread(() -> {
-                    String link = "https://www.zinxswiki.com/api/v1/validation/confirm?token=" + token;
-                    emailSender.send(
-                            email,
-                            buildEmail(username, link));
+                   confirmToken(token);
                 }).start();
 
                 return "true";
@@ -227,9 +230,9 @@ public class ValidationService {
 
             new Thread(() -> {
                 Account account =(Account) accountRepository.findByEmail(email).get();
-                emailSender.send(
+                emailSender.sendResetEmail(
                         email,
-                        buildResetEmail(email, "https://www.zinxswiki.com/passwordreset/request?token="+token));
+                        email, "https://www.zinxswiki.com/passwordreset/request?token="+token);
             }).start();
             return "true";
         }catch (Exception e){
@@ -241,7 +244,7 @@ public class ValidationService {
 
     @Transactional
     public ModelAndView confirmToken(String token) {
-        ConfirmationToken confirmationToken = confirmationTokenService
+        ConfirmationToken confirmationToken = (ConfirmationToken) confirmationTokenService
                 .getToken(token)
                 .orElseThrow(() ->
                         new IllegalStateException("token not found"));
@@ -257,148 +260,79 @@ public class ValidationService {
         }
 
         confirmationTokenService.setConfirmedAt(token);
-        accountService.enableAccount(
+        enableAccount(
                 confirmationToken.getAccount().getEmail());
         ModelAndView modelAndView = new ModelAndView();
         modelAndView.setViewName("redirect:/login");
         return modelAndView;
     }
 
-    private String buildEmail(String name, String link) {
-        return "<div style=\"font-family:Helvetica,Arial,sans-serif;font-size:16px;margin:0;color:#0b0c0c\">\n" +
-                "\n" +
-                "<span style=\"display:none;font-size:1px;color:#fff;max-height:0\"></span>\n" +
-                "\n" +
-                "  <table role=\"presentation\" width=\"100%\" style=\"border-collapse:collapse;min-width:100%;width:100%!important\" cellpadding=\"0\" cellspacing=\"0\" border=\"0\">\n" +
-                "    <tbody><tr>\n" +
-                "      <td width=\"100%\" height=\"53\" bgcolor=\"#0b0c0c\">\n" +
-                "        \n" +
-                "        <table role=\"presentation\" width=\"100%\" style=\"border-collapse:collapse;max-width:580px\" cellpadding=\"0\" cellspacing=\"0\" border=\"0\" align=\"center\">\n" +
-                "          <tbody><tr>\n" +
-                "            <td width=\"70\" bgcolor=\"#0b0c0c\" valign=\"middle\">\n" +
-                "                <table role=\"presentation\" cellpadding=\"0\" cellspacing=\"0\" border=\"0\" style=\"border-collapse:collapse\">\n" +
-                "                  <tbody><tr>\n" +
-                "                    <td style=\"padding-left:10px\">\n" +
-                "                  \n" +
-                "                    </td>\n" +
-                "                    <td style=\"font-size:28px;line-height:1.315789474;Margin-top:4px;padding-left:10px\">\n" +
-                "                      <span style=\"font-family:Helvetica,Arial,sans-serif;font-weight:700;color:#ffffff;text-decoration:none;vertical-align:top;display:inline-block\">Reset your password</span>\n" +
-                "                    </td>\n" +
-                "                  </tr>\n" +
-                "                </tbody></table>\n" +
-                "              </a>\n" +
-                "            </td>\n" +
-                "          </tr>\n" +
-                "        </tbody></table>\n" +
-                "        \n" +
-                "      </td>\n" +
-                "    </tr>\n" +
-                "  </tbody></table>\n" +
-                "  <table role=\"presentation\" class=\"m_-6186904992287805515content\" align=\"center\" cellpadding=\"0\" cellspacing=\"0\" border=\"0\" style=\"border-collapse:collapse;max-width:580px;width:100%!important\" width=\"100%\">\n" +
-                "    <tbody><tr>\n" +
-                "      <td width=\"10\" height=\"10\" valign=\"middle\"></td>\n" +
-                "      <td>\n" +
-                "        \n" +
-                "                <table role=\"presentation\" width=\"100%\" cellpadding=\"0\" cellspacing=\"0\" border=\"0\" style=\"border-collapse:collapse\">\n" +
-                "                  <tbody><tr>\n" +
-                "                    <td bgcolor=\"#1D70B8\" width=\"100%\" height=\"10\"></td>\n" +
-                "                  </tr>\n" +
-                "                </tbody></table>\n" +
-                "        \n" +
-                "      </td>\n" +
-                "      <td width=\"10\" valign=\"middle\" height=\"10\"></td>\n" +
-                "    </tr>\n" +
-                "  </tbody></table>\n" +
-                "\n" +
-                "\n" +
-                "\n" +
-                "  <table role=\"presentation\" class=\"m_-6186904992287805515content\" align=\"center\" cellpadding=\"0\" cellspacing=\"0\" border=\"0\" style=\"border-collapse:collapse;max-width:580px;width:100%!important\" width=\"100%\">\n" +
-                "    <tbody><tr>\n" +
-                "      <td height=\"30\"><br></td>\n" +
-                "    </tr>\n" +
-                "    <tr>\n" +
-                "      <td width=\"10\" valign=\"middle\"><br></td>\n" +
-                "      <td style=\"font-family:Helvetica,Arial,sans-serif;font-size:19px;line-height:1.315789474;max-width:560px\">\n" +
-                "        \n" +
-                "            <p style=\"Margin:0 0 20px 0;font-size:19px;line-height:25px;color:#0b0c0c\">Hi " + name + ",</p><p style=\"Margin:0 0 20px 0;font-size:19px;line-height:25px;color:#0b0c0c\"> Thank you for registering. Please click on the below link to activate your account: </p><blockquote style=\"Margin:0 0 20px 0;border-left:10px solid #b1b4b6;padding:15px 0 0.1px 15px;font-size:19px;line-height:25px\"><p style=\"Margin:0 0 20px 0;font-size:19px;line-height:25px;color:#0b0c0c\"> <a href=\"" + link + "\">Activate Now</a> </p></blockquote>\n Link will expire in 15 minutes. <p>See you soon</p>" +
-                "        \n" +
-                "      </td>\n" +
-                "      <td width=\"10\" valign=\"middle\"><br></td>\n" +
-                "    </tr>\n" +
-                "    <tr>\n" +
-                "      <td height=\"30\"><br></td>\n" +
-                "    </tr>\n" +
-                "  </tbody></table><div class=\"yj6qo\"></div><div class=\"adL\">\n" +
-                "\n" +
-                "</div></div>";
+
+
+    public boolean accountExists(Account account){
+        return accountRepository
+                .findByEmail(account.getEmail())
+                .isPresent();
     }
 
-    private String buildResetEmail(String name, String link) {
-        return "<div style=\"font-family:Helvetica,Arial,sans-serif;font-size:16px;margin:0;color:#0b0c0c\">\n" +
-                "\n" +
-                "<span style=\"display:none;font-size:1px;color:#fff;max-height:0\"></span>\n" +
-                "\n" +
-                "  <table role=\"presentation\" width=\"100%\" style=\"border-collapse:collapse;min-width:100%;width:100%!important\" cellpadding=\"0\" cellspacing=\"0\" border=\"0\">\n" +
-                "    <tbody><tr>\n" +
-                "      <td width=\"100%\" height=\"53\" bgcolor=\"#0b0c0c\">\n" +
-                "        \n" +
-                "        <table role=\"presentation\" width=\"100%\" style=\"border-collapse:collapse;max-width:580px\" cellpadding=\"0\" cellspacing=\"0\" border=\"0\" align=\"center\">\n" +
-                "          <tbody><tr>\n" +
-                "            <td width=\"70\" bgcolor=\"#0b0c0c\" valign=\"middle\">\n" +
-                "                <table role=\"presentation\" cellpadding=\"0\" cellspacing=\"0\" border=\"0\" style=\"border-collapse:collapse\">\n" +
-                "                  <tbody><tr>\n" +
-                "                    <td style=\"padding-left:10px\">\n" +
-                "                  \n" +
-                "                    </td>\n" +
-                "                    <td style=\"font-size:28px;line-height:1.315789474;Margin-top:4px;padding-left:10px\">\n" +
-                "                      <span style=\"font-family:Helvetica,Arial,sans-serif;font-weight:700;color:#ffffff;text-decoration:none;vertical-align:top;display:inline-block\">Reset your password</span>\n" +
-                "                    </td>\n" +
-                "                  </tr>\n" +
-                "                </tbody></table>\n" +
-                "              </a>\n" +
-                "            </td>\n" +
-                "          </tr>\n" +
-                "        </tbody></table>\n" +
-                "        \n" +
-                "      </td>\n" +
-                "    </tr>\n" +
-                "  </tbody></table>\n" +
-                "  <table role=\"presentation\" class=\"m_-6186904992287805515content\" align=\"center\" cellpadding=\"0\" cellspacing=\"0\" border=\"0\" style=\"border-collapse:collapse;max-width:580px;width:100%!important\" width=\"100%\">\n" +
-                "    <tbody><tr>\n" +
-                "      <td width=\"10\" height=\"10\" valign=\"middle\"></td>\n" +
-                "      <td>\n" +
-                "        \n" +
-                "                <table role=\"presentation\" width=\"100%\" cellpadding=\"0\" cellspacing=\"0\" border=\"0\" style=\"border-collapse:collapse\">\n" +
-                "                  <tbody><tr>\n" +
-                "                    <td bgcolor=\"#1D70B8\" width=\"100%\" height=\"10\"></td>\n" +
-                "                  </tr>\n" +
-                "                </tbody></table>\n" +
-                "        \n" +
-                "      </td>\n" +
-                "      <td width=\"10\" valign=\"middle\" height=\"10\"></td>\n" +
-                "    </tr>\n" +
-                "  </tbody></table>\n" +
-                "\n" +
-                "\n" +
-                "\n" +
-                "  <table role=\"presentation\" class=\"m_-6186904992287805515content\" align=\"center\" cellpadding=\"0\" cellspacing=\"0\" border=\"0\" style=\"border-collapse:collapse;max-width:580px;width:100%!important\" width=\"100%\">\n" +
-                "    <tbody><tr>\n" +
-                "      <td height=\"30\"><br></td>\n" +
-                "    </tr>\n" +
-                "    <tr>\n" +
-                "      <td width=\"10\" valign=\"middle\"><br></td>\n" +
-                "      <td style=\"font-family:Helvetica,Arial,sans-serif;font-size:19px;line-height:1.315789474;max-width:560px\">\n" +
-                "        \n" +
-                "            <p style=\"Margin:0 0 20px 0;font-size:19px;line-height:25px;color:#0b0c0c\">Hi " + name + ",</p><p style=\"Margin:0 0 20px 0;font-size:19px;line-height:25px;color:#0b0c0c\">  Please click on the below link to reset your password: </p><blockquote style=\"Margin:0 0 20px 0;border-left:10px solid #b1b4b6;padding:15px 0 0.1px 15px;font-size:19px;line-height:25px\"><p style=\"Margin:0 0 20px 0;font-size:19px;line-height:25px;color:#0b0c0c\"> <a href=\"" + link + "\">Activate Now</a> </p></blockquote>\n Link will expire in 15 minutes. <p></p>" +
-                "        \n" +
-                "      </td>\n" +
-                "      <td width=\"10\" valign=\"middle\"><br></td>\n" +
-                "    </tr>\n" +
-                "    <tr>\n" +
-                "      <td height=\"30\"><br></td>\n" +
-                "    </tr>\n" +
-                "  </tbody></table><div class=\"yj6qo\"></div><div class=\"adL\">\n" +
-                "\n" +
-                "</div></div>";
+    public Account getAccount(LoginRequest request){
+        String email = request.getEmail();
+
+        Optional<Account> accountByEmail = accountRepository.findByEmail(email);
+        if(accountByEmail.isPresent()){
+            Account account = (Account) accountByEmail.get();
+
+
+            if(bCryptPasswordEncoder.matches(request.getPassword(),account.getPassword()) && account.isEnabled()){
+
+                return account;
+            }else{
+
+                return null;
+            }
+        }else{
+
+            return null;
+        }
     }
+
+    public String signUpUser(Account account) {
+        boolean accountExists = accountExists(account);
+
+        if (accountExists) {
+            // TODO check of attributes are the same and
+            // TODO if email not confirmed send confirmation email.
+
+            throw new IllegalStateException("email already taken");
+        }
+
+        String encodedPassword = bCryptPasswordEncoder
+                .encode(account.getPassword());
+
+        account.setPassword(encodedPassword);
+
+
+        accountRepository.save( (Account) account);
+
+        String token = UUID.randomUUID().toString();
+
+        Token confirmationToken = new ConfirmationToken(
+                token,
+                LocalDateTime.now(),
+                LocalDateTime.now().plusMinutes(15),
+                account
+        );
+
+        confirmationTokenService.saveConfirmationToken(
+                confirmationToken);
+
+        return token;
+    }
+
+    public int enableAccount(String email) {
+        return accountRepository.enableAccount(email);
+    }
+
+
+
 }

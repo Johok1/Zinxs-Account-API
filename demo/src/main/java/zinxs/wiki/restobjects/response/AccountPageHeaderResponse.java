@@ -1,4 +1,5 @@
-package zinxs.wiki.jsonobjects;
+package zinxs.wiki.restobjects.response;
+
 
 import lombok.AllArgsConstructor;
 import lombok.EqualsAndHashCode;
@@ -9,8 +10,8 @@ import lombok.ToString;
 @AllArgsConstructor
 @EqualsAndHashCode
 @ToString
-public class TokenRequest {
-
-    private final String token;
+public class AccountPageHeaderResponse {
+    String pageId;
+    String pageName;
 
 }

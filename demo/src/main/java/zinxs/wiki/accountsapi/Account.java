@@ -9,7 +9,7 @@ import lombok.Setter;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
-import zinxs.wiki.jsonobjects.AccountPageHeaderResponse;
+import zinxs.wiki.restobjects.response.AccountPageHeaderResponse;
 
 
 import javax.persistence.*;
@@ -27,7 +27,8 @@ import java.util.Collections;
         @Index(name = "idx_email", columnList = "email", unique = true),
         @Index(name = "idx_nickname", columnList = "nickname")
 })
-@Inheritance(strategy=InheritanceType.SINGLE_TABLE)
+@Inheritance(strategy=InheritanceType.JOINED)
+@DiscriminatorColumn(name = "account_type")
 public class Account implements UserDetails {
 
     @SequenceGenerator(

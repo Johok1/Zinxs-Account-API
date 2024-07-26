@@ -1,4 +1,4 @@
-package zinxs.wiki.validationapi.confirmation;
+package zinxs.wiki.validationapi.token.confirmation;
 
 
 import lombok.Getter;
@@ -13,7 +13,9 @@ import java.time.LocalDateTime;
 @Setter
 @NoArgsConstructor
 @Entity
-public class ConfirmationToken {
+@Inheritance(strategy=InheritanceType.JOINED)
+@DiscriminatorColumn(name = "token_type")
+public class Token {
 
     @SequenceGenerator(
             name = "confirmation_token_sequence",
@@ -38,20 +40,15 @@ public class ConfirmationToken {
 
     private LocalDateTime confirmedAt;
 
-    @ManyToOne
-    @JoinColumn(
-            nullable = false,
-            name = "account_id"
-    )
-    private Account account;
 
-    public ConfirmationToken(String token,
+
+    public Token(String token,
                              LocalDateTime createdAt,
-                             LocalDateTime expiresAt,
-                             Account account) {
+                             LocalDateTime expiresAt
+                            ) {
         this.token = token;
         this.createdAt = createdAt;
         this.expiresAt = expiresAt;
-        this.account = account;
+
     }
 }

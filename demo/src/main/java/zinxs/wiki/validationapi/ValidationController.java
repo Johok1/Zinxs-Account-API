@@ -3,9 +3,9 @@ package zinxs.wiki.validationapi;
 import lombok.AllArgsConstructor;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
-import zinxs.wiki.jsonobjects.GoogleRegistrationRequest;
-import zinxs.wiki.jsonobjects.LoginRequest;
-import zinxs.wiki.jsonobjects.RegistrationRequest;
+import zinxs.wiki.restobjects.request.GoogleRegistrationRequest;
+import zinxs.wiki.restobjects.request.LoginRequest;
+import zinxs.wiki.restobjects.request.RegistrationRequest;
 
 @RestController
 @RequestMapping(path = "api/v1/validation")

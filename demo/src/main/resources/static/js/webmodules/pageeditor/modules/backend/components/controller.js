@@ -1,7 +1,7 @@
 export default class Controller {
     constructor() {
-        this.fetch_url_page = "https://www.zinxswiki.com/page"
-        this.fetch_url_image = "https://www.zinxswiki.com/image"
+        this.fetch_url_page = "https://www.zinxswiki.com:444/page"
+        this.fetch_url_image = "https://www.zinxswiki.com:444/image"
     }
 
     getPageName(pageId) {
